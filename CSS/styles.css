@@ -1,0 +1,8 @@
+/*Mise en page des écrans dont la largeur ne dépasse pas 1400px
+@media screen and (max-width:1440px) {*/
+/*css du style global du document*/
+:root {
+    --purple: #9356dc
+    --pink: #ff79da
+    --green: #99E2D0
+}
