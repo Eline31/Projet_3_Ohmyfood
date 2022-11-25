@@ -1,0 +1,19 @@
+{
+  "name": "projet_3_ohmyfood",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./sass/main.scss:./css/styles.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Eline31/Projet_3_Ohmyfood.git"
+  },
+  "author": "Eline31",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Eline31/Projet_3_Ohmyfood/issues"
+  },
+  "homepage": "https://github.com/Eline31/Projet_3_Ohmyfood#readme"
+}
