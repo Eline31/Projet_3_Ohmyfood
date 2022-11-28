@@ -1,0 +1,12 @@
+button {
+    padding: 12px 15px;
+    color: white;
+    background: linear-gradient($colour-secondary, $colour-primary);
+    border-radius: 30px;
+    cursor: pointer;
+    border-style: none;
+    margin-top: 10px;
+    font-family: roboto;
+    box-shadow: .1rem 1rem .9rem rgb(161, 160, 160);
+}
+
