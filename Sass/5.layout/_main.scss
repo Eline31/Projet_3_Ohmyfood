@@ -4,54 +4,39 @@
     flex-direction: column;
     background: white;
     padding: 10px 20px 30px 20px;
-    &__a {
+    width: 100%;
+    &__step {
         margin: 30px 0px;
+        text-decoration: none;
+        color: black;
         position: relative;
-        & > span:first-child {
+        > span:first-child {
             color: white;
             border-radius: 50%;
             background: $colour-primary;
             padding: 3px 8px;
             font-size: .9rem;
         }
-        & > span:last-child {
+        > span:nth-child(2) {
             border-radius: 20px;
             box-shadow: .5px 5px 9px #80808091;
             background: $lightgrey;
             padding: 20px;
             font-weight: 600;
             font-size: 0.9rem;
-            &__i {
-                padding: 5px 15px 5px 10px;
-                color: grey;
-                justify-content: center; 
+        }
+        &:active {
+            > span:nth-child(2) {
+                background: lighten($colour-primary, 30%);
             }
+            i {
+                color: $colour-primary;
+            }
+        }
+        i {
+            padding: 5px 15px 5px 10px;
+            color: grey;
+            justify-content: center; 
         }
     }
 }
-/*.fonctionnement a {
-    margin: 30px 0px;
-    position: relative;
-}
-.fonctionnement a > span:first-child {
-    color: white;
-    border-radius: 50%;
-    background: $colour-primary;
-    padding: 3px 8px;
-    font-size: .9rem;
-}
-.fonctionnement i {
-    padding: 5px 15px 5px 10px;
-    color: grey;
-    justify-content: center;
-}
-.fonctionnement a > span:last-child {
-    border-radius: 20px;
-    box-shadow: .5px 5px 9px #80808091;
-    background: $lightgrey;
-    padding: 20px;
-    font-weight: 600;
-    font-size: 0.9rem;
-}*/
-
-/*Section restaurants*/
