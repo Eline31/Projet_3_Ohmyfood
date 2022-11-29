@@ -6,22 +6,21 @@ header {
     align-items: center;
     width:100%;
     margin-bottom: 40px;
+    > span:first-child {
+        width: 100%;
+        background-color: white;
+        padding: 15px 0px;
+        border-bottom: 1px solid $lightgrey;
+    }
+    img {
+        width: 50%;
+    }
+    > span:nth-child(2) {
+        background-color: darken($lightgrey, 10%);
+        width:100%;
+        padding: 15px 0px;
+    }
+    i {
+        padding-right: 10px;
+    }
 }
-header > span:first-child {
-    width: 100%;
-    background-color: white;
-    padding: 15px 0px;
-    border-bottom: 1px solid $lightgrey;
-}
-header img {
-    width: 50%;
-}
-header > span:nth-child(2) {
-    background-color: darken($lightgrey, 10%);
-    width:100%;
-    padding: 15px 0px;
-}
-header i {
-    padding-right: 10px;
-}
-
