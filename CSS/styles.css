@@ -71,27 +71,18 @@ button {
   background: white;
   padding: 10px 20px 30px 20px;
 }
-
-.fonctionnement a {
+.fonctionnement__a {
   margin: 30px 0px;
   position: relative;
 }
-
-.fonctionnement a > span:first-child {
+.fonctionnement__a > span:first-child {
   color: white;
   border-radius: 50%;
   background: #9356dc;
   padding: 3px 8px;
   font-size: 0.9rem;
 }
-
-.fonctionnement i {
-  padding: 5px 15px 5px 10px;
-  color: grey;
-  justify-content: center;
-}
-
-.fonctionnement a > span:last-child {
+.fonctionnement__a > span:last-child {
   border-radius: 20px;
   box-shadow: 0.5px 5px 9px rgba(128, 128, 128, 0.568627451);
   background: #f5f5f5;
@@ -99,7 +90,36 @@ button {
   font-weight: 600;
   font-size: 0.9rem;
 }
+.fonctionnement__a > span:last-child__i {
+  padding: 5px 15px 5px 10px;
+  color: grey;
+  justify-content: center;
+}
 
+/*.fonctionnement a {
+    margin: 30px 0px;
+    position: relative;
+}
+.fonctionnement a > span:first-child {
+    color: white;
+    border-radius: 50%;
+    background: $colour-primary;
+    padding: 3px 8px;
+    font-size: .9rem;
+}
+.fonctionnement i {
+    padding: 5px 15px 5px 10px;
+    color: grey;
+    justify-content: center;
+}
+.fonctionnement a > span:last-child {
+    border-radius: 20px;
+    box-shadow: .5px 5px 9px #80808091;
+    background: $lightgrey;
+    padding: 20px;
+    font-weight: 600;
+    font-size: 0.9rem;
+}*/
 /*Section restaurants*/
 
 /*# sourceMappingURL=styles.css.map */

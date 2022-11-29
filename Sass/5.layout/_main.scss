@@ -4,8 +4,32 @@
     flex-direction: column;
     background: white;
     padding: 10px 20px 30px 20px;
+    &__a {
+        margin: 30px 0px;
+        position: relative;
+        & > span:first-child {
+            color: white;
+            border-radius: 50%;
+            background: $colour-primary;
+            padding: 3px 8px;
+            font-size: .9rem;
+        }
+        & > span:last-child {
+            border-radius: 20px;
+            box-shadow: .5px 5px 9px #80808091;
+            background: $lightgrey;
+            padding: 20px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            &__i {
+                padding: 5px 15px 5px 10px;
+                color: grey;
+                justify-content: center; 
+            }
+        }
+    }
 }
-.fonctionnement a {
+/*.fonctionnement a {
     margin: 30px 0px;
     position: relative;
 }
@@ -28,6 +52,6 @@
     padding: 20px;
     font-weight: 600;
     font-size: 0.9rem;
-}
+}*/
 
 /*Section restaurants*/
