@@ -91,6 +91,28 @@ header p {
   box-shadow: 0.5px 5px 9px rgba(128, 128, 128, 0.568627451);
 }
 
+.favorite > button:first-child {
+  border: none;
+  background: none;
+}
+.favorite > button:first-child i {
+  font-size: 1.4rem;
+}
+.favorite > button:last-child {
+  display: none;
+}
+.favorite:active > button:first-child {
+  display: none;
+}
+.favorite:active > button:last-child {
+  border: none;
+  background: none;
+}
+.favorite:active > button:last-child i {
+  font-size: 1.4rem;
+  color: linear-gradient(#9356dc, #ff79da);
+}
+
 /*Section fonctionnement*/
 .fonctionnement {
   display: flex;
@@ -175,14 +197,23 @@ header p {
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
-.restaurant__description .favorite {
-  font-size: 1.4rem;
-  background: transparent;
-  border: none;
-}
-.restaurant__description .favorite:active {
-  color: linear-gradient(#9356dc, #ff79da);
+  /*&--favorite {
+      font-size: 1.4rem;
+      background: transparent;
+      border: none;
+      > button:last-child {
+          display: none;
+      }
+      &:active {
+          button:first-child {
+              display: none;
+          }
+          button:last-child i {
+              display: block;
+              color: linear-gradient($colour-primary, $colour-secondary);
+          }   
+      }
+  }*/
 }
 
 .restaurant--nouveau {

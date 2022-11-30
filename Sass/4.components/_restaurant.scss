@@ -31,14 +31,23 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        .favorite {
+        /*&--favorite {
             font-size: 1.4rem;
             background: transparent;
             border: none;
-            &:active {
-                color: linear-gradient($colour-primary, $colour-secondary);
+            > button:last-child {
+                display: none;
             }
-        }
+            &:active {
+                button:first-child {
+                    display: none;
+                }
+                button:last-child i {
+                    display: block;
+                    color: linear-gradient($colour-primary, $colour-secondary);
+                }   
+            }
+        }*/
     }
 }
 .restaurant--nouveau {
