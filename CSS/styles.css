@@ -241,6 +241,9 @@ footer ul li {
   padding: 5px 0px;
   font-size: 14px;
 }
+footer ul li a {
+  color: white;
+}
 footer ul li i {
   font-size: 10px;
   padding-right: 10px;
