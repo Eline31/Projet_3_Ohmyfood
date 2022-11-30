@@ -1,17 +1,288 @@
-/* Error: Can't find stylesheet to import.
- *   ,
- * 5 | @import "./5.layout/main";
- *   |         ^^^^^^^^^^^^^^^^^
- *   '
- *   sass\main.scss 5:9  root stylesheet */
-
-body::before {
-  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
-      "Droid Sans Mono", monospace, monospace;
-  white-space: pre;
-  display: block;
-  padding: 1em;
-  margin-bottom: 1em;
-  border-bottom: 2px solid black;
-  content: "Error: Can't find stylesheet to import.\a   \2577 \a 5 \2502  @import \"./5.layout/main\";\d\a   \2502          ^^^^^^^^^^^^^^^^^\a   \2575 \a   sass\\main.scss 5:9  root stylesheet";
+body {
+  background-color: #f5f5f5;
+  font-family: roboto;
+  max-width: 768px;
+  box-sizing: border-box;
+  margin: 0px;
 }
+
+h1 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  padding: 30px 30px 0px 30px;
+  margin: 0px;
+}
+
+p {
+  font-family: roboto;
+  font-size: 1rem;
+  margin: 0px;
+}
+
+h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+h3 {
+  font-size: 1rem;
+  font-weight: 700;
+  margin: 0px 0px 5px 0px;
+}
+
+h4 {
+  font-size: 1.1rem;
+  padding-bottom: 10px;
+  margin: 0px;
+  font-family: shrikhand;
+  font-weight: 400;
+}
+
+h5 {
+  font-size: 1.8rem;
+  font-family: shrikhand;
+  font-weight: 400;
+  margin: 0px;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0px;
+  margin: 0px;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 40px;
+}
+header > span:first-child {
+  width: 100%;
+  background-color: white;
+  padding: 20px 0px 10px 0px;
+  border-bottom: 1px solid #f5f5f5;
+}
+header img {
+  width: 50%;
+}
+header > span:nth-child(2) {
+  background-color: gainsboro;
+  width: 100%;
+  padding: 15px 0px;
+}
+header i {
+  padding-right: 10px;
+}
+header p {
+  padding: 0px 20px;
+  margin: 15px 0px;
+}
+
+.header--menu {
+  display: flex;
+  flex-direction: row;
+  background: white;
+  padding: 20px 0px 10px 0px;
+  justify-content: center;
+  border-bottom: 1px solid #f5f5f5;
+  margin: 0px;
+}
+.header--menu a {
+  position: relative;
+  left: -60px;
+}
+.header--menu a i {
+  font-size: 1.4rem;
+}
+
+.btn {
+  padding: 12px 15px;
+  color: white;
+  background: linear-gradient(#ff79da, #9356dc);
+  border-radius: 30px;
+  cursor: pointer;
+  border-style: none;
+  margin-top: 10px;
+  font-family: roboto;
+  box-shadow: 0.5px 5px 9px rgba(128, 128, 128, 0.568627451);
+}
+
+.like > button:first-child {
+  border: none;
+  background: none;
+}
+.like > button:first-child i {
+  font-size: 1.4rem;
+}
+.like > button:last-child {
+  display: none;
+}
+.like:hover > button:first-child {
+  display: none;
+}
+.like:hover > button:last-child {
+  display: block;
+  border: none;
+  background: none;
+}
+.like:hover > button:last-child i {
+  font-size: 1.4rem;
+  color: linear-gradient(#9356dc, #ff79da);
+}
+
+/*Section fonctionnement*/
+.fonctionnement {
+  display: flex;
+  flex-direction: column;
+  background: white;
+  padding: 10px 20px 30px 20px;
+}
+.fonctionnement__step {
+  margin: 15px 0px;
+  text-decoration: none;
+  color: black;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.fonctionnement__step > span:first-child {
+  color: white;
+  border-radius: 50%;
+  background: #9356dc;
+  padding: 3px 8px;
+  font-size: 0.9rem;
+  position: relative;
+  left: 10px;
+}
+.fonctionnement__step > span:nth-child(2) {
+  width: 100%;
+  border-radius: 20px;
+  box-shadow: 0.5px 5px 9px rgba(128, 128, 128, 0.568627451);
+  background: #f5f5f5;
+  padding: 20px;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+.fonctionnement__step:active > span:nth-child(2) {
+  background: #e4d5f6;
+}
+.fonctionnement__step:active i {
+  color: #9356dc;
+}
+.fonctionnement__step i {
+  padding: 5px 15px 5px 10px;
+  color: grey;
+  justify-content: center;
+}
+
+/*Section Restaurants*/
+.restaurants {
+  padding: 10px 20px 30px 20px;
+}
+
+.restaurant {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  border-radius: 20px;
+  box-shadow: 0.5px 5px 9px rgba(128, 128, 128, 0.568627451);
+  background: white;
+  position: relative;
+  margin-bottom: 20px;
+}
+.restaurant img {
+  object-fit: cover;
+  width: 100%;
+  height: 200px;
+  border-radius: 20px 20px 0px 0px;
+}
+.restaurant--nouveau {
+  color: black;
+  background-color: #99E2D0;
+  width: 90px;
+  height: 30px;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9rem;
+}
+.restaurant__description {
+  padding: 15px 20px 15px 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /*&--favorite {
+      font-size: 1.4rem;
+      background: transparent;
+      border: none;
+      > button:last-child {
+          display: none;
+      }
+      &:active {
+          button:first-child {
+              display: none;
+          }
+          button:last-child i {
+              display: block;
+              color: linear-gradient($colour-primary, $colour-secondary);
+          }   
+      }
+  }*/
+}
+
+.restaurant--nouveau {
+  color: black;
+  background-color: #99E2D0;
+  width: 90px;
+  height: 30px;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9rem;
+}
+
+footer {
+  background: #353535;
+  color: white;
+  padding: 20px 20px 30px 20px;
+}
+footer ul li {
+  font-family: roboto;
+  padding: 5px 0px;
+  font-size: 14px;
+}
+footer ul li a {
+  color: white;
+}
+footer ul li i {
+  font-size: 10px;
+  padding-right: 10px;
+}
+
+.img-header img {
+  width: 100%;
+}
+
+.name {
+  display: flex;
+  padding: 30px 20px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/*# sourceMappingURL=styles.css.map */
