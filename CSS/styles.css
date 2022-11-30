@@ -91,24 +91,25 @@ header p {
   box-shadow: 0.5px 5px 9px rgba(128, 128, 128, 0.568627451);
 }
 
-.favorite > button:first-child {
+.like > button:first-child {
   border: none;
   background: none;
 }
-.favorite > button:first-child i {
+.like > button:first-child i {
   font-size: 1.4rem;
 }
-.favorite > button:last-child {
+.like > button:last-child {
   display: none;
 }
-.favorite:active > button:first-child {
+.like:hover > button:first-child {
   display: none;
 }
-.favorite:active > button:last-child {
+.like:hover > button:last-child {
+  display: block;
   border: none;
   background: none;
 }
-.favorite:active > button:last-child i {
+.like:hover > button:last-child i {
   font-size: 1.4rem;
   color: linear-gradient(#9356dc, #ff79da);
 }

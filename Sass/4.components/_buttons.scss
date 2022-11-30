@@ -10,7 +10,7 @@
     box-shadow: .5px 5px 9px #80808091;
 }
 
-.favorite {
+.like {
     > button:first-child {
         border: none;
         background: none;
@@ -21,17 +21,18 @@
     > button:last-child {
         display: none;
     }
-    &:active {
+    &:hover {
         > button:first-child {
             display: none;
         }
         > button:last-child {
+            display: block;
             border: none;
             background: none;
             i {
                 font-size: 1.4rem;
                 color: linear-gradient($colour-primary, $colour-secondary);
-                }   
+            }   
             }
         }
     }
