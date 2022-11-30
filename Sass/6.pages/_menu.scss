@@ -1,15 +1,12 @@
 .menu {
     border-radius: 40px 40px 0px 0px;
-    display: flex;
-    width: 100%;
     position: relative;
     top: -50px;
     background: $lightgrey;
+    padding: 30px 20px;
     &__name {
         display: flex;
-        padding: 30px 20px;
         justify-content: space-between;
         align-items: center;
-        width: 100%;
     }
 }

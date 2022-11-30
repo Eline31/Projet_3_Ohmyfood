@@ -1,0 +1,20 @@
+.plates__choice {
+    font-family: roboto;
+    font-size: 1.1rem;
+    font-weight: 700;
+    a {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-end;
+        background: white;
+        box-shadow: 0.5px 5px 9px rgb(154 154 154 / 25%);
+        padding: 15px 15px 15px 10px;
+        border-radius: 15px;
+    }
+    p {
+        font-weight: 400;
+        font-size: 1rem;
+    }
+}
+/*pour les ombres quand survol : box-shadow: .5px 5px 9px #80808091;*/
