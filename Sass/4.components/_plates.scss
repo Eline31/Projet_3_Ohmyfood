@@ -20,5 +20,8 @@
         position: relative;
         left: -20px;
     }
+    &:hover {
+        box-shadow: $shadow-hover;
+    }
 }
 /*pour les ombres quand survol : box-shadow: .5px 5px 9px #80808091;*/

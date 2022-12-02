@@ -8,7 +8,13 @@
     margin-top: 10px;
     font-family: roboto;
     box-shadow: $shadow;
+    &:hover {
+        box-shadow: $shadow-hover;
+    }
 }
+        /*@include btn-hover(linear-gradient($colour-secondary, $colour-primary))
+    } - pas encore au point*/
+    
 /*pour les ombres quand survol : box-shadow: .5px 5px 9px #80808091;*/
 
 .like {

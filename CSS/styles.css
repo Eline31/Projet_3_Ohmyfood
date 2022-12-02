@@ -1,3 +1,6 @@
+@charset "UTF-8";
+/*Je n'arrive pas à faire en sorte que colour soit reconnu
+$hover-lighten: lighten($colour,20%);*/
 body {
   background-color: #f5f5f5;
   font-family: roboto;
@@ -130,7 +133,12 @@ header p {
   font-family: roboto;
   box-shadow: 0.5px 5px 9px rgba(154, 154, 154, 0.25);
 }
+.btn:hover {
+  box-shadow: 0.5px 5px 9px rgba(154, 154, 154, 0.8);
+}
 
+/*@include btn-hover(linear-gradient($colour-secondary, $colour-primary))
+} - pas encore au point*/
 /*pour les ombres quand survol : box-shadow: .5px 5px 9px #80808091;*/
 .like > button:first-child {
   border: none;
@@ -183,11 +191,15 @@ header p {
 .fonctionnement__step > span:nth-child(2) {
   width: 100%;
   border-radius: 20px;
-  box-shadow: 0.5px 5px 9px rgba(128, 128, 128, 0.568627451);
+  box-shadow: 0.5px 5px 9px rgba(154, 154, 154, 0.25);
   background: #f5f5f5;
   padding: 20px;
   font-weight: 600;
   font-size: 0.9rem;
+}
+.fonctionnement__step > span:nth-child(2):hover {
+  box-shadow: 0.5px 5px 9px rgba(154, 154, 154, 0.8);
+  border-radius: 20px;
 }
 .fonctionnement__step:active > span:nth-child(2) {
   background: #e4d5f6;
@@ -275,6 +287,10 @@ header p {
   font-size: 0.9rem;
 }
 
+/*@mixin btn-hover($colour) {
+    box-shadow: $shadow-hover;
+    background: lighten($colour, 20%);
+}*/
 footer {
   background: #353535;
   color: white;
@@ -330,6 +346,9 @@ footer ul li i {
   padding-top: 5px;
   position: relative;
   left: -20px;
+}
+.plates__choice:hover {
+  box-shadow: 0.5px 5px 9px rgba(154, 154, 154, 0.8);
 }
 
 /*pour les ombres quand survol : box-shadow: .5px 5px 9px #80808091;*/
