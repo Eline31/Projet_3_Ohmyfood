@@ -12,12 +12,47 @@
         box-shadow: $shadow-hover;
     }
 }
+
+.spin {
+    background: linear-gradient($colour-secondary, $colour-primary);
+    height: 50px;
+    width: 50px;
+    animation: spin 3s linear infinite paused;
+    &:hover {
+        animation-play-state: running;
+    }
+}
         /*@include btn-hover(linear-gradient($colour-secondary, $colour-primary))
     } - pas encore au point*/
     
 /*pour les ombres quand survol : box-shadow: .5px 5px 9px #80808091;*/
-
 .like {
+    background: none;
+    border: none;
+    svg {
+        width: 23px;
+        height: 25px;
+        //fill: white;
+        &:hover {
+            fill: linear-gradient($colour-primary, $colour-secondary);
+        } 
+        }
+        /*&::after {
+            content:"";
+            //background: linear-gradient($colour-primary, $colour-secondary);
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            opacity: 1;
+            transition: opacity 400ms;
+            z-index: -1;
+        }*/
+    }
+
+
+/*.like {
     > button:first-child {
         border: none;
         background: none;
@@ -25,7 +60,24 @@
             font-size: 1.4rem;
         }
     }
-    > button:last-child {
+    &:hover {
+        > button:last-child {
+            display: none;
+        }
+        > button:last-child {
+            display: block;
+            border: none;
+            background: none;
+            i {
+                font-size: 1.4rem;
+                color: linear-gradient($colour-primary, $colour-secondary);
+            }   
+        }
+        &::after {
+            opacity: 1;
+        }    
+    }
+    /*> button:last-child {
         display: none;
     }
     &:hover {
@@ -42,4 +94,4 @@
             }   
             }
         }
-    }
+    }*/

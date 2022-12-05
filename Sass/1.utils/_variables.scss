@@ -14,3 +14,12 @@ $colour-white: #fff;
 $colour-invalid: #db464b;
 
 $heading-shadow-size: .55rem;
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg)
+    }
+}

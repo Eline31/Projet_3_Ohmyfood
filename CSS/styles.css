@@ -1,6 +1,14 @@
 @charset "UTF-8";
 /*Je n'arrive pas à faire en sorte que colour soit reconnu
 $hover-lighten: lighten($colour,20%);*/
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
 body {
   background-color: #f5f5f5;
   font-family: roboto;
@@ -137,32 +145,86 @@ header p {
   box-shadow: 0.5px 5px 9px rgba(154, 154, 154, 0.8);
 }
 
+.spin {
+  background: linear-gradient(#ff79da, #9356dc);
+  height: 50px;
+  width: 50px;
+  animation: spin 3s linear infinite paused;
+}
+.spin:hover {
+  animation-play-state: running;
+}
+
 /*@include btn-hover(linear-gradient($colour-secondary, $colour-primary))
 } - pas encore au point*/
 /*pour les ombres quand survol : box-shadow: .5px 5px 9px #80808091;*/
-.like > button:first-child {
-  border: none;
+.like {
   background: none;
-}
-.like > button:first-child i {
-  font-size: 1.4rem;
-}
-.like > button:last-child {
-  display: none;
-}
-.like:hover > button:first-child {
-  display: none;
-}
-.like:hover > button:last-child {
-  display: block;
   border: none;
-  background: none;
+  /*&::after {
+      content:"";
+      //background: linear-gradient($colour-primary, $colour-secondary);
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      opacity: 1;
+      transition: opacity 400ms;
+      z-index: -1;
+  }*/
 }
-.like:hover > button:last-child i {
-  font-size: 1.4rem;
-  color: linear-gradient(#9356dc, #ff79da);
+.like svg {
+  width: 23px;
+  height: 25px;
+}
+.like svg:hover {
+  fill: linear-gradient(#9356dc, #ff79da);
 }
 
+/*.like {
+    > button:first-child {
+        border: none;
+        background: none;
+        i {
+            font-size: 1.4rem;
+        }
+    }
+    &:hover {
+        > button:last-child {
+            display: none;
+        }
+        > button:last-child {
+            display: block;
+            border: none;
+            background: none;
+            i {
+                font-size: 1.4rem;
+                color: linear-gradient($colour-primary, $colour-secondary);
+            }   
+        }
+        &::after {
+            opacity: 1;
+        }    
+    }
+    /*> button:last-child {
+        display: none;
+    }
+    &:hover {
+        > button:first-child {
+            display: none;
+        }
+        > button:last-child {
+            display: block;
+            border: none;
+            background: none;
+            i {
+                font-size: 1.4rem;
+                color: linear-gradient($colour-primary, $colour-secondary);
+            }   
+            }
+        }
+    }*/
 /*Section fonctionnement*/
 .fonctionnement {
   display: flex;
@@ -220,6 +282,7 @@ header p {
 
 .restaurant {
   width: 100%;
+  max-width: 420px;
   display: flex;
   flex-direction: column;
   border-radius: 20px;
@@ -233,6 +296,9 @@ header p {
   width: 100%;
   height: 200px;
   border-radius: 20px 20px 0px 0px;
+}
+.restaurant:hover {
+  box-shadow: 0.5px 5px 9px rgba(154, 154, 154, 0.8);
 }
 .restaurant--nouveau {
   color: black;
