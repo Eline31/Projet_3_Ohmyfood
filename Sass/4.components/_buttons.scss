@@ -1,3 +1,5 @@
+@import "../1.utils/mixins";
+
 .btn {
     padding: 12px 15px;
     color: white;
@@ -9,7 +11,8 @@
     font-family: roboto;
     box-shadow: $shadow;
     &:hover {
-        box-shadow: $shadow-hover;
+        opacity: 0.9;
+        //box-shadow: $shadow-hover;
     }
 }
 
@@ -29,14 +32,16 @@
 .like {
     background: none;
     border: none;
+    cursor: pointer;
     svg {
         width: 23px;
         height: 25px;
-        //fill: white;
-        &:hover {
-            fill: linear-gradient($colour-primary, $colour-secondary);
+        .st0:hover {
+            animation: like 400ms both ease-in-out
         } 
         }
+    }
+
         /*&::after {
             content:"";
             //background: linear-gradient($colour-primary, $colour-secondary);
@@ -49,7 +54,7 @@
             transition: opacity 400ms;
             z-index: -1;
         }*/
-    }
+
 
 
 /*.like {

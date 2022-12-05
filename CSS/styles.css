@@ -130,6 +130,14 @@ header p {
   margin-bottom: 0px;
 }
 
+@keyframes like {
+  0% {
+    fill: #ff79da;
+  }
+  50% {
+    fill: #9356dc;
+  }
+}
 .btn {
   padding: 12px 15px;
   color: white;
@@ -142,7 +150,7 @@ header p {
   box-shadow: 0.5px 5px 9px rgba(154, 154, 154, 0.25);
 }
 .btn:hover {
-  box-shadow: 0.5px 5px 9px rgba(154, 154, 154, 0.8);
+  opacity: 0.9;
 }
 
 .spin {
@@ -161,27 +169,28 @@ header p {
 .like {
   background: none;
   border: none;
-  /*&::after {
-      content:"";
-      //background: linear-gradient($colour-primary, $colour-secondary);
-      position: absolute;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
-      opacity: 1;
-      transition: opacity 400ms;
-      z-index: -1;
-  }*/
+  cursor: pointer;
 }
 .like svg {
   width: 23px;
   height: 25px;
 }
-.like svg:hover {
-  fill: linear-gradient(#9356dc, #ff79da);
+.like svg .st0:hover {
+  animation: like 400ms both ease-in-out;
 }
 
+/*&::after {
+    content:"";
+    //background: linear-gradient($colour-primary, $colour-secondary);
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: 1;
+    transition: opacity 400ms;
+    z-index: -1;
+}*/
 /*.like {
     > button:first-child {
         border: none;
@@ -353,10 +362,14 @@ header p {
   font-size: 0.9rem;
 }
 
-/*@mixin btn-hover($colour) {
-    box-shadow: $shadow-hover;
-    background: lighten($colour, 20%);
-}*/
+@keyframes like {
+  0% {
+    fill: #ff79da;
+  }
+  50% {
+    fill: #9356dc;
+  }
+}
 footer {
   background: #353535;
   color: white;
