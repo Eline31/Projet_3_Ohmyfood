@@ -6,6 +6,7 @@ $colour-footer: #353535;
 
 $shadow: 0.5px 5px 9px rgb(154 154 154 / 25%);
 $shadow-hover: 0.5px 5px 9px rgb(154 154 154 / 80%);
+
 /*Je n'arrive pas à faire en sorte que colour soit reconnu
 $hover-lighten: lighten($colour,20%);*/
 
@@ -21,5 +22,21 @@ $heading-shadow-size: .55rem;
     }
     to {
         transform: rotate(360deg)
+    }
+}
+
+@keyframes like {
+    0% {
+        fill: $colour-secondary;
+        bottom: 100%;
+    }
+    60% {
+        fill: $colour-primary;
+        bottom: 50%;
+    }
+    100% {
+        fill: linear-gradient($colour-secondary, $colour-primary);
+        //margin-bottom: 100%;
+        bottom: 0%;
     }
 }

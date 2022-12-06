@@ -36,11 +36,12 @@
     svg {
         width: 23px;
         height: 25px;
-        .st0:hover {
-            animation: like 400ms both ease-in-out
+        //overflow: hidden;
+        :hover {
+            animation: like 400ms ease-in-out;
         } 
-        }
     }
+}
 
         /*&::after {
             content:"";
