@@ -188,11 +188,23 @@ header p {
 .like {
   position: relative;
   overflow: hidden;
-  transition: all 500ms;
+  /*&::after {
+      content:"";
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background-image: linear-gradient($colour-primary, $colour-secondary);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          opacity: 0;
+  }*/
 }
 .like > button:first-child {
   border: none;
   background: none;
+  transition: all 500ms ease-in-out;
 }
 .like > button:first-child i {
   font-size: 1.4rem;
@@ -213,6 +225,9 @@ header p {
 }
 .like:hover {
   overflow: visible;
+  /*&::after {
+      opacity:1;
+  }*/
 }
 .like:hover > button:last-child {
   display: block;
@@ -397,6 +412,8 @@ footer ul li i {
   border-radius: 15px;
   border-style: none;
   cursor: pointer;
+  position: relative;
+  overflow: visible;
 }
 .plates__choice p {
   font-weight: 400;
@@ -407,6 +424,26 @@ footer ul li i {
 }
 .plates__choice:hover {
   box-shadow: 0.5px 5px 9px rgba(154, 154, 154, 0.8);
+}
+.plates__choice:hover span {
+  transform: translateX(0);
+}
+.plates__choice > span {
+  width: 65px;
+  height: 100%;
+  background: #99E2D0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0px 15px 15px 0px;
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  transform: translateX(100%);
+}
+.plates__choice > span i {
+  color: white;
+  font-size: 1.5rem;
 }
 
 /*pour les ombres quand survol : box-shadow: .5px 5px 9px #80808091;*/

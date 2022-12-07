@@ -46,10 +46,11 @@
 .like {
     position: relative;
     overflow:hidden;
-    transition: all 500ms;
+    //transition: all 500ms ease-in-out;
     > button:first-child {
         border: none;
         background: none;
+        transition: all 500ms ease-in-out;
         i {
             font-size: 1.4rem;
         }
@@ -77,5 +78,21 @@
             position: absolute;
             top: 0px; 
         }   
+        /*&::after {
+            opacity:1;
+        }*/
     }
+    /*&::after {
+        content:"";
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-image: linear-gradient($colour-primary, $colour-secondary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            opacity: 0;
+    }*/
 }
+//ça devrait être fait avec opacity !
