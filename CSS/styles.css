@@ -172,74 +172,55 @@ header p {
 /*@include btn-hover(linear-gradient($colour-secondary, $colour-primary))
 } - pas encore au point*/
 /*pour les ombres quand survol : box-shadow: .5px 5px 9px #80808091;*/
+/*.like {
+    background: none;
+    border: none;
+    cursor: pointer;
+    svg {
+        width: 23px;
+        height: 25px;
+        //overflow: hidden;
+        :hover {
+            animation: like 400ms ease-in-out;
+        } 
+    }
+}*/
 .like {
-  background: none;
+  position: relative;
+  overflow: hidden;
+  transition: all 500ms;
+}
+.like > button:first-child {
   border: none;
-  cursor: pointer;
+  background: none;
 }
-.like svg {
-  width: 23px;
-  height: 25px;
+.like > button:first-child i {
+  font-size: 1.4rem;
 }
-.like svg :hover {
-  animation: like 400ms ease-in-out;
+.like > button:last-child {
+  border: none;
+  background: none;
+  position: absolute;
+  top: 22px;
+  left: 0px;
+}
+.like > button:last-child i {
+  font-size: 1.4rem;
+  background-image: linear-gradient(#9356dc, #ff79da);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-position: absolute;
+}
+.like:hover {
+  overflow: visible;
+}
+.like:hover > button:last-child {
+  display: block;
+  border: none;
+  position: absolute;
+  top: 0px;
 }
 
-/*&::after {
-    content:"";
-    //background: linear-gradient($colour-primary, $colour-secondary);
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    opacity: 1;
-    transition: opacity 400ms;
-    z-index: -1;
-}*/
-/*.like {
-    > button:first-child {
-        border: none;
-        background: none;
-        i {
-            font-size: 1.4rem;
-        }
-    }
-    &:hover {
-        > button:last-child {
-            display: none;
-        }
-        > button:last-child {
-            display: block;
-            border: none;
-            background: none;
-            i {
-                font-size: 1.4rem;
-                color: linear-gradient($colour-primary, $colour-secondary);
-            }   
-        }
-        &::after {
-            opacity: 1;
-        }    
-    }
-    /*> button:last-child {
-        display: none;
-    }
-    &:hover {
-        > button:first-child {
-            display: none;
-        }
-        > button:last-child {
-            display: block;
-            border: none;
-            background: none;
-            i {
-                font-size: 1.4rem;
-                color: linear-gradient($colour-primary, $colour-secondary);
-            }   
-            }
-        }
-    }*/
 /*Section fonctionnement*/
 .fonctionnement {
   display: flex;
