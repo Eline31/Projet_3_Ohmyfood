@@ -11,3 +11,11 @@
     justify-content: center;
     font-size: 0.9rem;
 }
+
+.spin {
+    background: linear-gradient($colour-secondary, $colour-primary);
+    height: 50px;
+    width: 50px;
+    animation: spin 3s linear;
+    margin: auto;
+}

@@ -1,4 +1,5 @@
 @import "../1.utils/mixins";
+@import "../1.utils/keyframes";
 
 .btn {
     padding: 12px 15px;
@@ -7,28 +8,58 @@
     border-radius: 30px;
     cursor: pointer;
     border-style: none;
-    margin-top: 10px;
+    margin: 10px auto 0px auto;
     font-family: roboto;
     box-shadow: $shadow;
+    width: 200px;
+    font-size: 0.9rem;
     &:hover {
         opacity: 0.9;
-        //box-shadow: $shadow-hover;
+        box-shadow: $shadow-hover;
     }
 }
 
-.spin {
-    background: linear-gradient($colour-secondary, $colour-primary);
-    height: 50px;
-    width: 50px;
-    animation: spin 3s linear infinite paused;
+.restaurant {
+    width: 100%;
+    max-width: 420px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+    box-shadow: $shadow;
+    background: white;
+    position: relative;
+    margin-bottom: 20px;
+    img {
+        object-fit: cover;
+        width: 100%;
+        height: 200px;
+        border-radius: 20px 20px 0px 0px;
+    }
     &:hover {
-        animation-play-state: running;
+        box-shadow: $shadow-hover;
+    }
+    &--nouveau {
+        color: darken($colour-tertiary, 80%);
+        background-color: $colour-tertiary;
+        width: 90px;
+        height: 30px;
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 0.9rem;
+    }
+    &__description {
+        padding: 15px 20px 15px 15px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center; 
     }
 }
-        /*@include btn-hover(linear-gradient($colour-secondary, $colour-primary))
-    } - pas encore au point*/
-    
-/*pour les ombres quand survol : box-shadow: .5px 5px 9px #80808091;*/
+       
+// version avec le svg et keyframes like
 /*.like {
     background: none;
     border: none;
@@ -43,6 +74,7 @@
     }
 }*/
 
+// Version aux deux coeurs
 .like {
     position: relative;
     overflow:hidden;
@@ -82,6 +114,7 @@
             opacity:1;
         }*/
     }
+   //Pour faire fonctionner opacity, à voir plus tard
     /*&::after {
         content:"";
         position: absolute;
@@ -95,4 +128,84 @@
             opacity: 0;
     }*/
 }
-//ça devrait être fait avec opacity !
+
+.plates__choice {
+    width: 100%;
+    font-family: roboto;
+    font-size: 1.1rem;
+    font-weight: 700;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    background: white;
+    box-shadow: $shadow;
+    padding: 15px 15px 15px 10px;
+    border-radius: 15px;
+    border-style: none;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 15px;
+    transition: transform 400ms ease-in-out;
+    .title {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        text-align:left;
+        width: 270px;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+        z-index: 0;
+        > span {
+            text-overflow: ellipsis;
+            overflow: hidden;
+            white-space: nowrap;
+        }
+        > p {
+            font-weight: 400;
+            font-size: 1rem;
+            padding-top: 5px;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            white-space: nowrap;
+           // position: relative;
+           // left: -20px;
+        }
+    }
+    .price {
+        z-index: 1;
+        padding-left: 10px;
+        background: white;
+        height: 21px;
+    }
+    > span {
+        width:65px;
+        height:100%;
+        background: $colour-tertiary;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 0px 15px 15px 0px;
+        position: absolute;
+        right: 0px;
+        top: 0px;
+        transform: translateX(100%);
+        i {
+            color: white;
+            font-size: 1.5rem;
+        }
+    }
+    &:hover {
+        box-shadow: $shadow-hover; /*Ne fonctionne plus !!*/
+        //transition: transform 700ms ease-in-out;
+        span {
+            transform: translateX(0);
+        }
+        .price {
+            transform: translateX(-65px)
+        }
+        }
+}
+/*pour les ombres quand survol : box-shadow: .5px 5px 9px #80808091;*/

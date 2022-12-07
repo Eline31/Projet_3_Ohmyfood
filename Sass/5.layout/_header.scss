@@ -34,11 +34,14 @@ header {
     background: white;
     padding: 20px 0px 10px 0px;
     justify-content:center;
+    align-items: center;
     border-bottom: 1px solid $lightgrey;
     margin: 0px;
+    width: 100%;
+    position: relative;
     a {
-        position: relative;
-        left: -60px;
+        position: absolute;
+        left: 30px;
         i {
             font-size: 1.4rem;
         }
