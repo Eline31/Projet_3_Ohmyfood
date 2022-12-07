@@ -13,6 +13,9 @@
     border-radius: 15px;
     border-style: none;
     cursor: pointer;
+    position: relative;
+    overflow: visible;
+    //transition: transform 700ms ease-in;
     p {
         font-weight: 400;
         font-size: 1rem;
@@ -22,6 +25,27 @@
     }
     &:hover {
         box-shadow: $shadow-hover;
+        //transition: transform 700ms ease-in-out;
+        span {
+            transform: translateX(0);
+        }
+        }
+    > span {
+        width:65px;
+        height:100%;
+        background: $colour-tertiary;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 0px 15px 15px 0px;
+        position: absolute;
+        right: 0px;
+        top: 0px;
+        transform: translateX(100%);
+        i {
+            color: white;
+            font-size: 1.5rem;
+        }
     }
 }
 /*pour les ombres quand survol : box-shadow: .5px 5px 9px #80808091;*/

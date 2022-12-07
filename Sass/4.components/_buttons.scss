@@ -29,7 +29,7 @@
     } - pas encore au point*/
     
 /*pour les ombres quand survol : box-shadow: .5px 5px 9px #80808091;*/
-.like {
+/*.like {
     background: none;
     border: none;
     cursor: pointer;
@@ -41,63 +41,58 @@
             animation: like 400ms ease-in-out;
         } 
     }
-}
+}*/
 
-        /*&::after {
-            content:"";
-            //background: linear-gradient($colour-primary, $colour-secondary);
-            position: absolute;
-            top: 0;
-            right: 0;
-            bottom: 0;
-            left: 0;
-            opacity: 1;
-            transition: opacity 400ms;
-            z-index: -1;
-        }*/
-
-
-
-/*.like {
+.like {
+    position: relative;
+    overflow:hidden;
+    //transition: all 500ms ease-in-out;
     > button:first-child {
         border: none;
         background: none;
+        transition: all 500ms ease-in-out;
         i {
             font-size: 1.4rem;
         }
     }
-    &:hover {
-        > button:last-child {
-            display: none;
+    > button:last-child {
+        border: none;
+        background: none;
+        position: absolute;
+        top: 22px;
+        left:0px;
+        i {
+            font-size: 1.4rem;
+            background-image: linear-gradient($colour-primary, $colour-secondary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-position: absolute;
         }
+    }
+    &:hover {
+        overflow: visible;
+        //transition: all 200ms;
         > button:last-child {
             display: block;
             border: none;
-            background: none;
-            i {
-                font-size: 1.4rem;
-                color: linear-gradient($colour-primary, $colour-secondary);
-            }   
-        }
-        &::after {
-            opacity: 1;
-        }    
+            position: absolute;
+            top: 0px; 
+        }   
+        /*&::after {
+            opacity:1;
+        }*/
     }
-    /*> button:last-child {
-        display: none;
-    }
-    &:hover {
-        > button:first-child {
-            display: none;
-        }
-        > button:last-child {
-            display: block;
-            border: none;
-            background: none;
-            i {
-                font-size: 1.4rem;
-                color: linear-gradient($colour-primary, $colour-secondary);
-            }   
-            }
-        }
+    /*&::after {
+        content:"";
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-image: linear-gradient($colour-primary, $colour-secondary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            opacity: 0;
     }*/
+}
+//ça devrait être fait avec opacity !
