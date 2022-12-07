@@ -413,7 +413,7 @@ footer ul li i {
   border-style: none;
   cursor: pointer;
   position: relative;
-  overflow: visible;
+  overflow: hidden;
 }
 .plates__choice p {
   font-weight: 400;
@@ -423,7 +423,7 @@ footer ul li i {
   left: -20px;
 }
 .plates__choice:hover {
-  box-shadow: 0.5px 5px 9px rgba(154, 154, 154, 0.8);
+  box-shadow: 0.5px 5px 9px rgba(154, 154, 154, 0.8); /*Ne fonctionne plus !!*/
 }
 .plates__choice:hover span {
   transform: translateX(0);

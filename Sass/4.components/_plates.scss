@@ -14,7 +14,7 @@
     border-style: none;
     cursor: pointer;
     position: relative;
-    overflow: visible;
+    overflow: hidden;
     //transition: transform 700ms ease-in;
     p {
         font-weight: 400;
@@ -24,7 +24,7 @@
         left: -20px;
     }
     &:hover {
-        box-shadow: $shadow-hover;
+        box-shadow: $shadow-hover; /*Ne fonctionne plus !!*/
         //transition: transform 700ms ease-in-out;
         span {
             transform: translateX(0);
