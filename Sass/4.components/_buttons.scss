@@ -13,9 +13,9 @@
     box-shadow: $shadow;
     width: 200px;
     font-size: 0.9rem;
+    transition: filter .5s;
     &:hover {
-        opacity: 0.9;
-        box-shadow: $shadow-hover;
+        @include btn-hover;
     }
 }
 
@@ -29,6 +29,7 @@
     background: white;
     position: relative;
     margin-bottom: 20px;
+    transition: filter .5s;
     img {
         object-fit: cover;
         width: 100%;
@@ -36,7 +37,7 @@
         border-radius: 20px 20px 0px 0px;
     }
     &:hover {
-        box-shadow: $shadow-hover;
+        @include btn-hover;
     }
     &--nouveau {
         color: darken($colour-tertiary, 80%);
@@ -147,7 +148,7 @@
     position: relative;
     overflow: hidden;
     margin-bottom: 15px;
-    transition: transform 400ms ease-in-out;
+    transition: all 400ms ease-in-out;
     .title {
         display: flex;
         flex-direction: column;
@@ -157,7 +158,6 @@
         text-overflow: ellipsis;
         overflow: hidden;
         white-space: nowrap;
-        z-index: 0;
         > span {
             text-overflow: ellipsis;
             overflow: hidden;
@@ -170,15 +170,13 @@
             text-overflow: ellipsis;
             overflow: hidden;
             white-space: nowrap;
-           // position: relative;
-           // left: -20px;
         }
     }
     .price {
-        z-index: 1;
         padding-left: 10px;
         background: white;
         height: 21px;
+        transition: all 400ms ease-in-out;
     }
     > span {
         width:65px;
@@ -192,19 +190,24 @@
         right: 0px;
         top: 0px;
         transform: translateX(100%);
+        transition: all 400ms ease-in-out;
         i {
             color: white;
             font-size: 1.5rem;
+            transform: rotate(0deg);
+            transition: all 400ms ease-in-out 100ms;
         }
     }
     &:hover {
-        box-shadow: $shadow-hover; /*Ne fonctionne plus !!*/
-        //transition: transform 700ms ease-in-out;
+        box-shadow: $shadow-hover;
         span {
             transform: translateX(0);
+            i {
+                transform: rotate(360deg);
+            }
         }
         .price {
-            transform: translateX(-65px)
+            transform: translateX(-70px);
         }
         }
 }

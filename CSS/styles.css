@@ -23,28 +23,6 @@ $hover-lighten: lighten($colour,20%);*/
     bottom: 0%;
   }
 }
-@keyframes spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-@keyframes like {
-  0% {
-    fill: #ff79da;
-    bottom: 100%;
-  }
-  60% {
-    fill: #9356dc;
-    bottom: 50%;
-  }
-  100% {
-    fill: linear-gradient(#ff79da, #9356dc);
-    bottom: 0%;
-  }
-}
 @keyframes plates {
   0% {
     transform: translateX(-110%);
@@ -180,10 +158,11 @@ ul {
   box-shadow: 0.5px 5px 9px rgba(154, 154, 154, 0.25);
   width: 200px;
   font-size: 0.9rem;
+  transition: filter 0.5s;
 }
 .btn:hover {
-  opacity: 0.9;
   box-shadow: 0.5px 5px 9px rgba(154, 154, 154, 0.8);
+  filter: brightness(110%);
 }
 
 .restaurant {
@@ -196,6 +175,7 @@ ul {
   background: white;
   position: relative;
   margin-bottom: 20px;
+  transition: filter 0.5s;
 }
 .restaurant img {
   object-fit: cover;
@@ -205,6 +185,7 @@ ul {
 }
 .restaurant:hover {
   box-shadow: 0.5px 5px 9px rgba(154, 154, 154, 0.8);
+  filter: brightness(110%);
 }
 .restaurant--nouveau {
   color: black;
@@ -308,7 +289,7 @@ ul {
   position: relative;
   overflow: hidden;
   margin-bottom: 15px;
-  transition: transform 400ms ease-in-out;
+  transition: all 400ms ease-in-out;
 }
 .choice .title {
   display: flex;
@@ -319,7 +300,6 @@ ul {
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
-  z-index: 0;
 }
 .choice .title > span {
   text-overflow: ellipsis;
@@ -335,10 +315,10 @@ ul {
   white-space: nowrap;
 }
 .choice .price {
-  z-index: 1;
   padding-left: 10px;
   background: white;
   height: 21px;
+  transition: all 400ms ease-in-out;
 }
 .choice > span {
   width: 65px;
@@ -352,19 +332,25 @@ ul {
   right: 0px;
   top: 0px;
   transform: translateX(100%);
+  transition: all 400ms ease-in-out;
 }
 .choice > span i {
   color: white;
   font-size: 1.5rem;
+  transform: rotate(0deg);
+  transition: all 400ms ease-in-out 100ms;
 }
 .choice:hover {
-  box-shadow: 0.5px 5px 9px rgba(154, 154, 154, 0.8); /*Ne fonctionne plus !!*/
+  box-shadow: 0.5px 5px 9px rgba(154, 154, 154, 0.8);
 }
 .choice:hover span {
   transform: translateX(0);
 }
+.choice:hover span i {
+  transform: rotate(360deg);
+}
 .choice:hover .price {
-  transform: translateX(-65px);
+  transform: translateX(-70px);
 }
 
 .restaurant--nouveau {
@@ -410,6 +396,11 @@ header > span:nth-child(2) {
   background-color: gainsboro;
   width: 100%;
   padding: 15px 0px;
+}
+header > span:nth-child(2) input {
+  background: none;
+  border: none;
+  font-weight: 600;
 }
 header i {
   padding-right: 10px;

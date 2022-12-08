@@ -1,4 +1,4 @@
-@mixin btn-hover($colour) {
+@mixin btn-hover {
     box-shadow: $shadow-hover;
-    background: lighten($colour, 20%);
+    filter: brightness(110%);
 }
