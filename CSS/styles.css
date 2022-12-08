@@ -267,7 +267,7 @@ ul {
   border: none;
   background: none;
   position: absolute;
-  top: 22px;
+  top: 25px;
   left: 0px;
 }
 .like > button:last-child i {
@@ -367,7 +367,6 @@ ul {
   transform: translateX(-65px);
 }
 
-/*pour les ombres quand survol : box-shadow: .5px 5px 9px #80808091;*/
 .restaurant--nouveau {
   color: black;
   background-color: #99E2D0;
@@ -443,6 +442,8 @@ header p {
 .header--menu {
   width: 100%;
   margin-bottom: 0px;
+  max-height: 350px;
+  object-fit: cover;
 }
 
 footer {
@@ -557,6 +558,9 @@ footer ul li i {
 }
 .menu__plates .choice--3 {
   animation-delay: 3200ms;
+}
+.menu__plates .choice--4 {
+  animation-delay: 3500ms;
 }
 
 /*# sourceMappingURL=styles.css.map */
