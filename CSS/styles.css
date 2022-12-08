@@ -45,7 +45,22 @@ $hover-lighten: lighten($colour,20%);*/
     bottom: 0%;
   }
 }
-@keyframes plates {}
+@keyframes plates {
+  0% {
+    transform: translateX(-110%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+@keyframes plates__choice {
+  0% {
+    transform: translateX(-110%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
 body {
   background-color: #f5f5f5;
   font-family: roboto;
@@ -137,7 +152,22 @@ ul {
     bottom: 0%;
   }
 }
-@keyframes plates {}
+@keyframes plates {
+  0% {
+    transform: translateX(-110%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+@keyframes plates__choice {
+  0% {
+    transform: translateX(-110%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
 .btn {
   padding: 12px 15px;
   color: white;
@@ -260,7 +290,7 @@ ul {
   top: 0px;
 }
 
-.plates__choice {
+.choice {
   width: 100%;
   font-family: roboto;
   font-size: 1.1rem;
@@ -280,7 +310,7 @@ ul {
   margin-bottom: 15px;
   transition: transform 400ms ease-in-out;
 }
-.plates__choice .title {
+.choice .title {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -291,12 +321,12 @@ ul {
   white-space: nowrap;
   z-index: 0;
 }
-.plates__choice .title > span {
+.choice .title > span {
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
 }
-.plates__choice .title > p {
+.choice .title > p {
   font-weight: 400;
   font-size: 1rem;
   padding-top: 5px;
@@ -304,13 +334,13 @@ ul {
   overflow: hidden;
   white-space: nowrap;
 }
-.plates__choice .price {
+.choice .price {
   z-index: 1;
   padding-left: 10px;
   background: white;
   height: 21px;
 }
-.plates__choice > span {
+.choice > span {
   width: 65px;
   height: 100%;
   background: #99E2D0;
@@ -323,17 +353,17 @@ ul {
   top: 0px;
   transform: translateX(100%);
 }
-.plates__choice > span i {
+.choice > span i {
   color: white;
   font-size: 1.5rem;
 }
-.plates__choice:hover {
+.choice:hover {
   box-shadow: 0.5px 5px 9px rgba(154, 154, 154, 0.8); /*Ne fonctionne plus !!*/
 }
-.plates__choice:hover span {
+.choice:hover span {
   transform: translateX(0);
 }
-.plates__choice:hover .price {
+.choice:hover .price {
   transform: translateX(-65px);
 }
 
@@ -505,6 +535,28 @@ footer ul li i {
 }
 .menu__plates {
   margin-bottom: 15px;
+  animation: plates 1000ms ease-in 0s backwards;
+}
+.menu__plates--1 {
+  animation-delay: 500ms;
+}
+.menu__plates--2 {
+  animation-delay: 1000ms;
+}
+.menu__plates--3 {
+  animation-delay: 1500ms;
+}
+.menu__plates .choice {
+  animation: plates__choice 1100ms ease-in 2300ms backwards;
+}
+.menu__plates .choice--1 {
+  animation-delay: 2600ms;
+}
+.menu__plates .choice--2 {
+  animation-delay: 2900ms;
+}
+.menu__plates .choice--3 {
+  animation-delay: 3200ms;
 }
 
 /*# sourceMappingURL=styles.css.map */
