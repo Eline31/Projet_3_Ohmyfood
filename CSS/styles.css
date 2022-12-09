@@ -248,7 +248,6 @@ ul {
 }
 .like:hover {
   overflow: hidden;
-  transition: transform 300ms ease-in-out;
   /*&::after {
       opacity:1;
   }*/
