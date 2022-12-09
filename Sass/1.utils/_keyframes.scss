@@ -23,20 +23,13 @@
     }
 }
 
-@keyframes plates {
-    0% {
-        transform: translateX(-110%);
-    }
-    100% {
-        transform: translateX(0%);
-    }
-}
-
 @keyframes plates__choice {
-    0% {
-        transform: translateX(-110%);
+    from {
+        transform: translateY(20px);
+        opacity: 0;
     }
-    100% {
-        transform: translateX(0%);
+    to {
+        transform: translateY(0);
+        opacity: 1;
     }
 }

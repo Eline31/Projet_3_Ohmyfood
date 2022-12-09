@@ -23,20 +23,14 @@ $hover-lighten: lighten($colour,20%);*/
     bottom: 0%;
   }
 }
-@keyframes plates {
-  0% {
-    transform: translateX(-110%);
-  }
-  100% {
-    transform: translateX(0%);
-  }
-}
 @keyframes plates__choice {
-  0% {
-    transform: translateX(-110%);
+  from {
+    transform: translateY(20px);
+    opacity: 0;
   }
-  100% {
-    transform: translateX(0%);
+  to {
+    transform: translateY(0);
+    opacity: 1;
   }
 }
 body {
@@ -130,20 +124,14 @@ ul {
     bottom: 0%;
   }
 }
-@keyframes plates {
-  0% {
-    transform: translateX(-110%);
-  }
-  100% {
-    transform: translateX(0%);
-  }
-}
 @keyframes plates__choice {
-  0% {
-    transform: translateX(-110%);
+  from {
+    transform: translateY(20px);
+    opacity: 0;
   }
-  100% {
-    transform: translateX(0%);
+  to {
+    transform: translateY(0);
+    opacity: 1;
   }
 }
 .btn {
@@ -527,31 +515,21 @@ footer ul li i {
 }
 .menu__plates {
   margin-bottom: 15px;
-  animation: plates 1000ms ease-in 0s backwards;
-}
-.menu__plates--1 {
-  animation-delay: 500ms;
-}
-.menu__plates--2 {
-  animation-delay: 1000ms;
-}
-.menu__plates--3 {
-  animation-delay: 1500ms;
 }
 .menu__plates .choice {
-  animation: plates__choice 1100ms ease-in 2300ms backwards;
+  animation: plates__choice 1100ms ease-in backwards;
 }
 .menu__plates .choice--1 {
-  animation-delay: 2600ms;
+  animation-delay: 300ms;
 }
 .menu__plates .choice--2 {
-  animation-delay: 2900ms;
+  animation-delay: 600ms;
 }
 .menu__plates .choice--3 {
-  animation-delay: 3200ms;
+  animation-delay: 900ms;
 }
 .menu__plates .choice--4 {
-  animation-delay: 3500ms;
+  animation-delay: 1200ms;
 }
 
 /*# sourceMappingURL=styles.css.map */

@@ -14,17 +14,11 @@
     }
     &__plates {
         margin-bottom: 15px;
-        animation: plates 1000ms ease-in 0s backwards;
-            @for $i from 1 through 3 {
-                &--#{$i} {
-                    animation-delay: 500ms * $i;
-                }
-            }
         .choice {
-            animation: plates__choice 1100ms ease-in 2300ms backwards;
+            animation: plates__choice 1100ms ease-in backwards;
                 @for $i from 1 through 4 {
                     &--#{$i} {
-                       animation-delay: 300ms * $i + 2300ms; 
+                       animation-delay: 300ms * $i; 
                     }
                 }
         }            
