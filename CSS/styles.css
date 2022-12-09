@@ -227,7 +227,6 @@ ul {
 .like > button:first-child {
   border: none;
   background: none;
-  transition: all 500ms ease-in-out;
 }
 .like > button:first-child i {
   font-size: 1.4rem;
@@ -245,9 +244,11 @@ ul {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-position: absolute;
+  transform: translateY(0px);
 }
 .like:hover {
-  overflow: visible;
+  overflow: hidden;
+  transition: transform 300ms ease-in-out;
   /*&::after {
       opacity:1;
   }*/
@@ -256,7 +257,8 @@ ul {
   display: block;
   border: none;
   position: absolute;
-  top: 0px;
+  transform: translateY(-25px);
+  transition: transform 600ms ease-in-out;
 }
 
 .choice {
