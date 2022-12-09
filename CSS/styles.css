@@ -10,15 +10,15 @@ $hover-lighten: lighten($colour,20%);*/
   }
 }
 @keyframes like {
-  0% {
+  0%, 59% {
     fill: #ff79da;
     bottom: 100%;
   }
-  60% {
+  60%, 90% {
     fill: #9356dc;
     bottom: 50%;
   }
-  100% {
+  91%, 100% {
     fill: linear-gradient(#ff79da, #9356dc);
     bottom: 0%;
   }
@@ -111,15 +111,15 @@ ul {
   }
 }
 @keyframes like {
-  0% {
+  0%, 59% {
     fill: #ff79da;
     bottom: 100%;
   }
-  60% {
+  60%, 90% {
     fill: #9356dc;
     bottom: 50%;
   }
-  100% {
+  91%, 100% {
     fill: linear-gradient(#ff79da, #9356dc);
     bottom: 0%;
   }
@@ -195,71 +195,68 @@ ul {
   align-items: center;
 }
 
-/*.like {
-    background: none;
-    border: none;
-    cursor: pointer;
-    svg {
-        width: 23px;
-        height: 25px;
-        //overflow: hidden;
-        :hover {
-            animation: like 400ms ease-in-out;
-        } 
-    }
-}*/
 .like {
-  position: relative;
-  overflow: hidden;
-  /*&::after {
-      content:"";
-      position: absolute;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
-      background-image: linear-gradient($colour-primary, $colour-secondary);
-          -webkit-background-clip: text;
-          -webkit-text-fill-color: transparent;
-          opacity: 0;
-  }*/
-}
-.like > button:first-child {
-  border: none;
   background: none;
-}
-.like > button:first-child i {
-  font-size: 1.4rem;
-}
-.like > button:last-child {
   border: none;
-  background: none;
-  position: absolute;
-  top: 25px;
-  left: 0px;
+  cursor: pointer;
 }
-.like > button:last-child i {
-  font-size: 1.4rem;
-  background-image: linear-gradient(#9356dc, #ff79da);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-position: absolute;
-  transform: translateY(0px);
+.like svg {
+  width: 23px;
+  height: 25px;
 }
-.like:hover {
-  overflow: hidden;
-  /*&::after {
-      opacity:1;
-  }*/
-}
-.like:hover > button:last-child {
-  display: block;
-  border: none;
-  position: absolute;
-  transform: translateY(-25px);
-  transition: transform 600ms ease-in-out;
+.like svg :hover {
+  animation: like 400ms ease-in-out;
 }
 
+/*.like {
+    position: relative;
+    overflow:hidden;
+    > button:first-child {
+        border: none;
+        background: none;
+        i {
+            font-size: 1.4rem;
+        }
+    }
+    > button:last-child {
+        border: none;
+        background: none;
+        position: absolute;
+        top: 25px;
+        left:0px;
+        i {
+            font-size: 1.4rem;
+            background-image: linear-gradient($colour-primary, $colour-secondary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-position: absolute;
+            transform: translateY(0px);
+        }
+    }
+    &:hover {
+        overflow: hidden;
+        > button:last-child {
+            display: block;
+            border: none;
+            position: absolute;
+            transform: translateY(-25px);
+            transition: transform 600ms ease-in-out;
+        }   
+    }
+   //Pour faire fonctionner opacity, à voir plus tard
+    //&::after {
+        content:"";
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-image: linear-gradient($colour-primary, $colour-secondary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            opacity: 0;
+    }
+}*/
 .choice {
   width: 100%;
   font-family: roboto;

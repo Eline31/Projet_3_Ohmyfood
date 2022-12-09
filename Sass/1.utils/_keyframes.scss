@@ -7,16 +7,17 @@
     }
 }
 
+
 @keyframes like {
-    0% {
+    0%, 59% {
         fill: $colour-secondary;
         bottom: 100%;
     }
-    60% {
+    60%, 90% {
         fill: $colour-primary;
         bottom: 50%;
     }
-    100% {
+    91%, 100% {
         fill: linear-gradient($colour-secondary, $colour-primary);
         //margin-bottom: 100%;
         bottom: 0%;
