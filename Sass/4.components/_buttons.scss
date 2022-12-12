@@ -59,23 +59,7 @@
         align-items: center; 
     }
 }
-       
-// version avec le svg et keyframes like
-/*.like {
-    background: none;
-    border: none;
-    cursor: pointer;
-    svg {
-        width: 23px;
-        height: 25px;
-        //overflow: hidden;
-        :hover {
-            animation: like 400ms ease-in-out;
-        } 
-    }
-}*/
 
-// Version aux deux coeurs
 .like {
     position: relative;
     overflow:hidden;
@@ -90,43 +74,22 @@
         border: none;
         background: none;
         position: absolute;
-        top: 25px;
         left:0px;
+        opacity: 0;
+        transition: opacity 300ms ease-in-out;
         i {
             font-size: 1.4rem;
             background-image: linear-gradient($colour-primary, $colour-secondary);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-position: absolute;
-            transform: translateY(0px);
         }
     }
     &:hover {
-        overflow: hidden;
         > button:last-child {
-            display: block;
-            border: none;
-            position: absolute;
-            transform: translateY(-25px);
-            transition: transform 500ms ease-in-out;
+            opacity: 1;
         }   
-        /*&::after {
-            opacity:1;
-        }*/
     }
-   //Pour faire fonctionner opacity, à voir plus tard
-    /*&::after {
-        content:"";
-        position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        background-image: linear-gradient($colour-primary, $colour-secondary);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        opacity: 0;
-    }*/
 }
 
 .choice {

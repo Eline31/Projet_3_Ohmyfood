@@ -192,34 +192,9 @@ ul {
   align-items: center;
 }
 
-/*.like {
-    background: none;
-    border: none;
-    cursor: pointer;
-    svg {
-        width: 23px;
-        height: 25px;
-        //overflow: hidden;
-        :hover {
-            animation: like 400ms ease-in-out;
-        } 
-    }
-}*/
 .like {
   position: relative;
   overflow: hidden;
-  /*&::after {
-      content:"";
-      position: absolute;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
-      background-image: linear-gradient($colour-primary, $colour-secondary);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      opacity: 0;
-  }*/
 }
 .like > button:first-child {
   border: none;
@@ -232,8 +207,9 @@ ul {
   border: none;
   background: none;
   position: absolute;
-  top: 25px;
   left: 0px;
+  opacity: 0;
+  transition: opacity 300ms ease-in-out;
 }
 .like > button:last-child i {
   font-size: 1.4rem;
@@ -241,20 +217,9 @@ ul {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-position: absolute;
-  transform: translateY(0px);
-}
-.like:hover {
-  overflow: hidden;
-  /*&::after {
-      opacity:1;
-  }*/
 }
 .like:hover > button:last-child {
-  display: block;
-  border: none;
-  position: absolute;
-  transform: translateY(-25px);
-  transition: transform 500ms ease-in-out;
+  opacity: 1;
 }
 
 .choice {
