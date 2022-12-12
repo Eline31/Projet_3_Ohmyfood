@@ -69,7 +69,7 @@
         width: 23px;
         height: 25px;
         //overflow: hidden;
-        &:hover {
+        :hover {
             animation: like 400ms ease-in-out forwards;
         } 
     }

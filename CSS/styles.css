@@ -204,7 +204,7 @@ ul {
   width: 23px;
   height: 25px;
 }
-.like svg:hover {
+.like svg :hover {
   animation: like 400ms ease-in-out forwards;
 }
 
