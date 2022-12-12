@@ -1,6 +1,3 @@
-@charset "UTF-8";
-/*Je n'arrive pas à faire en sorte que colour soit reconnu
-$hover-lighten: lighten($colour,20%);*/
 @keyframes spin {
   from {
     transform: rotate(0deg);
@@ -11,15 +8,15 @@ $hover-lighten: lighten($colour,20%);*/
 }
 @keyframes like {
   0% {
-    fill: #ff79da;
+    fill: rgb(255, 121, 218);
     bottom: 100%;
   }
   60% {
-    fill: #9356dc;
+    fill: rgb(147, 86, 220);
     bottom: 50%;
   }
   100% {
-    fill: linear-gradient(#ff79da, #9356dc);
+    fill: linear-gradient(rgb(255, 121, 218), rgb(147, 86, 220));
     bottom: 0%;
   }
 }
@@ -112,15 +109,15 @@ ul {
 }
 @keyframes like {
   0% {
-    fill: #ff79da;
+    fill: rgb(255, 121, 218);
     bottom: 100%;
   }
   60% {
-    fill: #9356dc;
+    fill: rgb(147, 86, 220);
     bottom: 50%;
   }
   100% {
-    fill: linear-gradient(#ff79da, #9356dc);
+    fill: linear-gradient(rgb(255, 121, 218), rgb(147, 86, 220));
     bottom: 0%;
   }
 }
@@ -137,7 +134,7 @@ ul {
 .btn {
   padding: 12px 15px;
   color: white;
-  background: linear-gradient(#ff79da, #9356dc);
+  background: linear-gradient(rgb(255, 121, 218), rgb(147, 86, 220));
   border-radius: 30px;
   cursor: pointer;
   border-style: none;
@@ -219,9 +216,9 @@ ul {
       bottom: 0;
       left: 0;
       background-image: linear-gradient($colour-primary, $colour-secondary);
-          -webkit-background-clip: text;
-          -webkit-text-fill-color: transparent;
-          opacity: 0;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      opacity: 0;
   }*/
 }
 .like > button:first-child {
@@ -240,7 +237,7 @@ ul {
 }
 .like > button:last-child i {
   font-size: 1.4rem;
-  background-image: linear-gradient(#9356dc, #ff79da);
+  background-image: linear-gradient(rgb(147, 86, 220), rgb(255, 121, 218));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-position: absolute;
@@ -257,7 +254,7 @@ ul {
   border: none;
   position: absolute;
   transform: translateY(-25px);
-  transition: transform 600ms ease-in-out;
+  transition: transform 500ms ease-in-out;
 }
 
 .choice {
@@ -357,7 +354,7 @@ ul {
 }
 
 .spin {
-  background: linear-gradient(#ff79da, #9356dc);
+  background: linear-gradient(rgb(255, 121, 218), rgb(147, 86, 220));
   height: 50px;
   width: 50px;
   animation: spin 3s linear;
@@ -463,7 +460,7 @@ footer ul li i {
 .fonctionnement__step > span:first-child {
   color: white;
   border-radius: 50%;
-  background: #9356dc;
+  background: rgb(147, 86, 220);
   padding: 3px 8px;
   font-size: 0.9rem;
   position: relative;
@@ -486,7 +483,7 @@ footer ul li i {
   background: #e4d5f6;
 }
 .fonctionnement__step:active i {
-  color: #9356dc;
+  color: rgb(147, 86, 220);
 }
 .fonctionnement__step i {
   padding: 5px 15px 5px 10px;

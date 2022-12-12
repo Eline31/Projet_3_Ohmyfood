@@ -108,7 +108,7 @@
             border: none;
             position: absolute;
             transform: translateY(-25px);
-            transition: transform 600ms ease-in-out;
+            transition: transform 500ms ease-in-out;
         }   
         /*&::after {
             opacity:1;
@@ -123,9 +123,9 @@
         bottom: 0;
         left: 0;
         background-image: linear-gradient($colour-primary, $colour-secondary);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            opacity: 0;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        opacity: 0;
     }*/
 }
 
