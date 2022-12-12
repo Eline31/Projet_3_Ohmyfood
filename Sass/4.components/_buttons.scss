@@ -59,7 +59,7 @@
         align-items: center; 
     }
 }
-       
+
 // version avec le svg et keyframes like
 .like {
     background: none;
@@ -69,14 +69,47 @@
         width: 23px;
         height: 25px;
         //overflow: hidden;
-        :hover {
+        &:hover {
             animation: like 400ms ease-in-out forwards;
         } 
     }
 }
 
-// Version aux deux coeurs
+//version avec le svg et transition
 /*.like {
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition : transform 300ms ease-in-out;
+    svg {
+        width: 23px;
+        height: 25px;
+        transition: transform 300ms ease-in-out;
+        fill: linear-gradient($colour-secondary, $colour-primary);
+        //overflow: hidden;
+        &::after {
+            content: "";
+            display: block;
+            position: absolute;
+            //bottom: 0;
+            //top: 100%;
+            //left: 0;
+            //right: 0;
+            transform: translateY(25px);
+            z-index: 1;
+            fill: linear-gradient($colour-secondary, $colour-primary);
+            transition: transform 300ms ease-in-out;
+        }
+        &:hover {
+           //top: 0%;
+           transition: transform 300ms ease-in-out;
+           transform: translateY(0px);
+        } 
+    }
+}*/
+
+// Version aux deux coeurs et transition
+/*.likebtn {
     position: relative;
     overflow:hidden;
     > button:first-child {
@@ -97,7 +130,7 @@
             background-image: linear-gradient($colour-primary, $colour-secondary);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            background-position: absolute;
+            background-position: 100% 100%;
             transform: translateY(0px);
         }
     }
@@ -109,10 +142,11 @@
             position: absolute;
             transform: translateY(-25px);
             transition: transform 600ms ease-in-out;
-        }   
+        } 
     }
+}*/      
    //Pour faire fonctionner opacity, à voir plus tard
-    //&::after {
+   /*&::after {
         content:"";
         position: absolute;
         top: 0;
@@ -123,8 +157,7 @@
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             opacity: 0;
-    }
-}*/
+   }*/
 
 .choice {
     width: 100%;

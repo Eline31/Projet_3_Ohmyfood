@@ -9,21 +9,18 @@
 
 
 @keyframes like {
-    0%, 40% {
-        fill: linear-gradient($colour-secondary, $colour-primary);
-        margin-bottom: 0%;
-        fill-opacity: 0.3;
+    0% {
+        fill: $colour-secondary;
+        bottom: 100%;
     }
-    41%, 80% {
-        fill: linear-gradient($colour-secondary, $colour-primary);
+    60% {
+        fill: $colour-primary;
         bottom: 50%;
-        fill-opacity: 0.6;
     }
-    81%, 100% {
+    100% {
         fill: linear-gradient($colour-secondary, $colour-primary);
         //margin-bottom: 100%;
-        bottom: 100%;
-        fill-opacity: 1;
+        bottom: 0%;
     }
 }
 
