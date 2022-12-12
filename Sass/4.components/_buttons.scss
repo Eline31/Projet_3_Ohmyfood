@@ -70,7 +70,7 @@
         height: 25px;
         //overflow: hidden;
         :hover {
-            animation: like 400ms ease-in-out;
+            animation: like 400ms ease-in-out forwards;
         } 
     }
 }

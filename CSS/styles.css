@@ -10,17 +10,20 @@ $hover-lighten: lighten($colour,20%);*/
   }
 }
 @keyframes like {
-  0%, 59% {
-    fill: #ff79da;
-    bottom: 100%;
-  }
-  60%, 90% {
-    fill: #9356dc;
-    bottom: 50%;
-  }
-  91%, 100% {
+  0%, 40% {
     fill: linear-gradient(#ff79da, #9356dc);
-    bottom: 0%;
+    margin-bottom: 0%;
+    fill-opacity: 0.3;
+  }
+  41%, 80% {
+    fill: linear-gradient(#ff79da, #9356dc);
+    bottom: 50%;
+    fill-opacity: 0.6;
+  }
+  81%, 100% {
+    fill: linear-gradient(#ff79da, #9356dc);
+    bottom: 100%;
+    fill-opacity: 1;
   }
 }
 @keyframes plates__choice {
@@ -111,17 +114,20 @@ ul {
   }
 }
 @keyframes like {
-  0%, 59% {
-    fill: #ff79da;
-    bottom: 100%;
-  }
-  60%, 90% {
-    fill: #9356dc;
-    bottom: 50%;
-  }
-  91%, 100% {
+  0%, 40% {
     fill: linear-gradient(#ff79da, #9356dc);
-    bottom: 0%;
+    margin-bottom: 0%;
+    fill-opacity: 0.3;
+  }
+  41%, 80% {
+    fill: linear-gradient(#ff79da, #9356dc);
+    bottom: 50%;
+    fill-opacity: 0.6;
+  }
+  81%, 100% {
+    fill: linear-gradient(#ff79da, #9356dc);
+    bottom: 100%;
+    fill-opacity: 1;
   }
 }
 @keyframes plates__choice {
@@ -205,7 +211,7 @@ ul {
   height: 25px;
 }
 .like svg :hover {
-  animation: like 400ms ease-in-out;
+  animation: like 400ms ease-in-out forwards;
 }
 
 /*.like {
