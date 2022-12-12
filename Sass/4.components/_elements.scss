@@ -9,3 +9,22 @@
         animation-play-state: running;
     }
 }
+
+.outer-spin {
+    //position: absolute;
+    //left: calc(50% - 150px);
+    height: 300px;
+    width: 300px;
+    background-image: linear-gradient($colour-secondary, $colour-primary, $colour-tertiary);
+    border-radius: 50%;
+    animation: rotate 2000ms infinite;
+}
+
+.inner-spin {
+    //position: absolute;
+    //left: calc(50% - 140px);
+    height: 280px;
+    width: 280px;
+    background-image: linear-gradient(0deg, #36295e, #1c1045);
+    border-radius: 50%;
+}
