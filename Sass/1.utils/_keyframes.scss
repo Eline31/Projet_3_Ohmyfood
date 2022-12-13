@@ -10,10 +10,19 @@
 }
 
 @keyframes rotate {
-    from {
+    0% {
         transform:rotate(0turn);
     }
-    to {
+    100% {
         transform:rotate(1turn);
+    }
+}
+
+@keyframes disappear {
+    0% {
+        opacity: 100%;
+    }
+    100% {
+        opacity: 0%;
     }
 }

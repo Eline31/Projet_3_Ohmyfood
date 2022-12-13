@@ -12,9 +12,15 @@
     </head>
 
     <body>
+        <div class="container-spinner">
+            <div class="outer-spin">
+                <span class="inner-spin"></span>
+            </div>
+        </div>
+
         <header>
             <span><img src="./images/logo/ohmyfood.png" alt="logo Ohmyfood"></span>
-            <span><i class="fa-solid fa-location-dot"></i><input type="location" name="lieu" value="Paris, Belleville"></span>
+            <span><i class="fa-solid fa-location-dot"></i>Paris, Belleville</span>
             <h1>
                 Réservez le menu qui vous convient
             </h1>
@@ -128,16 +134,19 @@
                     </div>
                   </a>
                 </article>
-                <div class="outer-spin"><div class="inner-spin"></div></div>
             </section>
         </main>
 
         <footer>
             <ul><h4>ohmyfood</h4>
-                <li><a><i class="fa-solid fa-utensils"></i>Proposer un restaurant</a></li>
-                <li><a><i class="fa-solid fa-handshake-angle"></i>Devenir partenaire</a></li>
-                <li><a>Mentions légales</a></li>
-                <li><a href="mail:adresseemail">Contact</a></li>
+                <div>
+                    <li><a href="#"><i class="fa-solid fa-utensils"></i>Proposer un restaurant</a></li>
+                    <li><a href="#"><i class="fa-solid fa-handshake-angle"></i>Devenir partenaire</a></li>
+                </div>
+                <div>
+                    <li><a href="#">Mentions légales</a></li>
+                    <li><a href="mail:adresseemail">Contact</a></li>
+                </div>
             </ul>
         </footer>
     </body>
