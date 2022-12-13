@@ -10,7 +10,8 @@ header {
         background-color: white;
         padding: 20px 0px 10px 0px;
         border-bottom: 1px solid $lightgrey;
-        box-shadow: 1.5px 3px 9px rgb(87, 86, 86);
+        box-shadow: $shadow;
+        z-index: 50;
     }
     img {
         width: 45%;
