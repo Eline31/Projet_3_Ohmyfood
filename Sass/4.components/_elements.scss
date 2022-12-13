@@ -1,30 +1,24 @@
 @import "../1.utils/keyframes";
-
-.spin {
-    background: linear-gradient($colour-secondary, $colour-primary);
-    height: 50px;
-    width: 50px;
-    animation: spin 3s linear infinite paused;
-    &:hover {
-        animation-play-state: running;
-    }
-}
-
 .outer-spin {
     //position: absolute;
     //left: calc(50% - 150px);
-    height: 300px;
-    width: 300px;
-    background-image: linear-gradient($colour-secondary, $colour-primary, $colour-tertiary);
+    height: 80px;
+    width: 80px;
+    background-image: linear-gradient(135deg,$colour-secondary 0%, $colour-primary 50%, $colour-tertiary 100%);
     border-radius: 50%;
-    animation: rotate 2000ms infinite;
-}
-
-.inner-spin {
-    //position: absolute;
-    //left: calc(50% - 140px);
-    height: 280px;
-    width: 280px;
-    background-image: linear-gradient(0deg, #36295e, #1c1045);
-    border-radius: 50%;
+    animation: rotate 1800ms linear 5s;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    .inner-spin {
+        //position: absolute;
+        //left: calc(50% - 140px);
+        height: 65px;
+        width: 65px;
+        background: $lightgrey;
+        border-radius: 50%;
+        position: absolute;
+    }
 }
