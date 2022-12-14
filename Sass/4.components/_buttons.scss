@@ -20,8 +20,10 @@
 }
 
 .restaurant {
-    width: 100%;
-    max-width: 500px;
+    flex: 1;
+    max-width: 350px;
+    min-width: 300px;
+    height: 275px;
     display: flex;
     flex-direction: column;
     border-radius: 20px;
