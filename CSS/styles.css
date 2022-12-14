@@ -159,7 +159,7 @@ ul {
   box-shadow: 0.5px 5px 9px rgba(154, 154, 154, 0.25);
   background: white;
   position: relative;
-  margin-bottom: 30px;
+  margin: 0px 30px 30px 0px;
   transition: filter 0.5s;
 }
 .restaurant img {
@@ -462,7 +462,7 @@ footer ul li i {
   background: white;
   padding: 10px 20px 30px 20px;
   margin-top: 40px;
-  justify-content: flex-start;
+  justify-content: space-between;
   align-items: center;
 }
 .fonctionnement__step {
@@ -523,7 +523,6 @@ footer ul li i {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-around;
   align-items: center;
 }
 
