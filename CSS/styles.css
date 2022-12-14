@@ -19,9 +19,11 @@
 @keyframes disappear {
   0% {
     opacity: 100%;
+    z-index: 100;
   }
   100% {
     opacity: 0%;
+    z-index: -100;
   }
 }
 body {
@@ -122,9 +124,11 @@ ul {
 @keyframes disappear {
   0% {
     opacity: 100%;
+    z-index: 100;
   }
   100% {
     opacity: 0%;
+    z-index: -100;
   }
 }
 .btn {
@@ -321,9 +325,11 @@ ul {
 @keyframes disappear {
   0% {
     opacity: 100%;
+    z-index: 100;
   }
   100% {
     opacity: 0%;
+    z-index: -100;
   }
 }
 .container-spinner {
