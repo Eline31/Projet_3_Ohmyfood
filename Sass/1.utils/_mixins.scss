@@ -1,4 +1,5 @@
 @mixin btn-hover {
     box-shadow: $shadow-hover;
-    filter: brightness(110%);
+    //filter: brightness(110%);
+    opacity: 75%;
 }

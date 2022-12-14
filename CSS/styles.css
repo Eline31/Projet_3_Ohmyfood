@@ -147,7 +147,7 @@ ul {
 }
 .btn:hover {
   box-shadow: 0.5px 5px 9px rgba(154, 154, 154, 0.8);
-  filter: brightness(110%);
+  opacity: 75%;
 }
 
 .restaurant {
@@ -170,7 +170,7 @@ ul {
 }
 .restaurant:hover {
   box-shadow: 0.5px 5px 9px rgba(154, 154, 154, 0.8);
-  filter: brightness(110%);
+  opacity: 75%;
 }
 .restaurant--nouveau {
   color: black;
@@ -492,6 +492,7 @@ footer ul li i {
   padding: 20px;
   font-weight: 600;
   font-size: 0.9rem;
+  margin-right: 20px;
 }
 .fonctionnement__step > span:nth-child(2):hover {
   box-shadow: 0.5px 5px 9px rgba(154, 154, 154, 0.8);
