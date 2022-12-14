@@ -385,6 +385,7 @@ header > span:first-child {
 }
 header img {
   width: 45%;
+  max-width: 330px;
 }
 header > span:nth-child(2) {
   background-color: gainsboro;
@@ -471,21 +472,27 @@ footer ul li i {
   color: black;
   position: relative;
   display: flex;
+  flex-direction: row;
   align-items: center;
 }
 .fonctionnement__step > span:first-child {
   color: white;
   border-radius: 50%;
   background: rgb(147, 86, 220);
-  padding: 3px 8px;
+  padding: 3px 3px;
+  height: 23px;
+  width: 23px;
   font-size: 0.9rem;
   position: relative;
   left: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .fonctionnement__step > span:nth-child(2) {
-  width: 100%;
+  flex: 1;
   max-width: 350px;
-  min-width: 240px;
+  min-width: 200px;
   border-radius: 20px;
   box-shadow: 0.5px 5px 9px rgba(154, 154, 154, 0.25);
   background: #f5f5f5;

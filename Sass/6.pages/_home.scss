@@ -15,20 +15,26 @@
         color: black;
         position: relative;
         display: flex;
+        flex-direction: row;
         align-items: center;
         > span:first-child {
             color: white;
             border-radius: 50%;
             background: $colour-primary;
-            padding: 3px 8px;
+            padding: 3px 3px;
+            height: 23px;
+            width: 23px;
             font-size: .9rem;
             position: relative;
             left: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
         > span:nth-child(2) {
-            width: 100%;
+            flex: 1;
             max-width: 350px;
-            min-width: 240px;
+            min-width: 200px;
             border-radius: 20px;
             box-shadow: $shadow;
             background: $lightgrey;
