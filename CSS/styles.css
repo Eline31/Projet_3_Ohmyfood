@@ -31,11 +31,11 @@ body {
   font-family: roboto;
   box-sizing: border-box;
   margin: 0px;
-  /*@media (max-width: 992px) {
-      max-width: 992px;
+  /*@media (min-width: 480px) {
+      min-width: 480px;
   }
-  @media (max-width: 1400px) {
-      max-width: 1400px;
+  @media (min-width: 992px) {
+      min-width: 992px;
   }*/
 }
 
@@ -151,8 +151,8 @@ ul {
 }
 
 .restaurant {
-  flex: 1;
-  max-width: 350px;
+  max-width: 460px;
+  width: 100%;
   min-width: 300px;
   height: 275px;
   display: flex;
@@ -161,7 +161,6 @@ ul {
   box-shadow: 0.5px 5px 9px rgba(154, 154, 154, 0.25);
   background: white;
   position: relative;
-  margin: 0px 30px 30px 0px;
   transition: filter 0.5s;
 }
 .restaurant img {
@@ -523,17 +522,22 @@ footer ul li i {
 /*Section Restaurants*/
 .restaurants {
   padding: 10px 20px 30px 20px;
+}
+.restaurants .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(25rem 1fr));
-  grid-auto-flow: row;
+  width: 100%;
+  justify-items: center;
   grid-gap: 2rem;
 }
+@media screen and (min-width: 680px) {
+  .restaurants .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    grid-auto-flow: row;
+    grid-gap: 2rem;
+  }
+}
 
-/*.cards {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(25rem 1fr));
-        grid-gap: 2rem;
-    }*/
 .menu {
   border-radius: 40px 40px 0px 0px;
   position: relative;
