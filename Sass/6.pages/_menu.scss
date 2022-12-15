@@ -11,9 +11,17 @@
         justify-content: space-between;
         align-items: center;
         margin-bottom: 15px;
+        @media screen and (min-width: 680px) {
+            justify-content: center;
+        }
+        button {
+            @media screen and (min-width: 680px) {
+                margin-left: 30px;
+            }
+        } 
     }
     &__plates {
-        margin-bottom: 15px;
+        margin-bottom: 30px;
         .choice {
             animation: plates__choice 1100ms ease-in backwards;
                 @for $i from 1 through 4 {

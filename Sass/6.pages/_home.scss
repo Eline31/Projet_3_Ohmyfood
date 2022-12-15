@@ -1,3 +1,5 @@
+@import "../5.layout/grid";
+
 /*Section fonctionnement*/
 .fonctionnement {
     background: white;
@@ -6,7 +8,6 @@
     justify-content: space-between;
     align-items: center;
     &__step {
-        max-width: 460px;
         width: 100%;
         min-width: 300px;
         text-decoration: none;
@@ -37,26 +38,22 @@
             padding: 20px;
             font-weight: 600;
             font-size: 0.9rem;
+            i {
+                padding: 5px 15px 5px 10px;
+                color: grey;
+                justify-content: center; 
+            }
             &:hover {
                 box-shadow: $shadow-hover;
                 border-radius: 20px;
-            }
-        }
-        &:hover {
-            > span:nth-child(2) {
                 background: lighten($colour-primary, 30%);
+                i {
+                    color: $colour-primary;
+                }
             }
-            i {
-                color: $colour-primary;
-            }
-        }
-        i {
-            padding: 5px 15px 5px 10px;
-            color: grey;
-            justify-content: center; 
         }
     }
-}
+}   
 
 /*Section Restaurants*/
 .restaurants {

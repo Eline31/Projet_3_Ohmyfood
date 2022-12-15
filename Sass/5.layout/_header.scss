@@ -13,7 +13,7 @@ header {
         box-shadow: $shadow;
         z-index: 50;
     }
-    img {
+    .logo {
         width: 45%;
         max-width: 330px;
     }
@@ -43,6 +43,7 @@ header {
     margin: 0px;
     width: 100%;
     position: relative;
+    z-index:1;
     a {
         position: absolute;
         left: 30px;
@@ -55,6 +56,15 @@ header {
 .header--menu {
     width: 100%;
     margin-bottom: 0px;
-    max-height: 350px;
-    object-fit: cover;
+    .img--menu {
+        width:100%;
+        max-height: 300px;
+        object-fit: cover;
+        position:relative;
+        top: -12px;
+        @media screen and (min-width: 680px) {
+            max-height: 380px;
+        }
+    }
 }
+

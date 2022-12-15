@@ -31,12 +31,6 @@ body {
   font-family: roboto;
   box-sizing: border-box;
   margin: 0px;
-  /*@media (min-width: 480px) {
-      min-width: 480px;
-  }
-  @media (min-width: 992px) {
-      min-width: 992px;
-  }*/
 }
 
 h1 {
@@ -151,7 +145,6 @@ ul {
 }
 
 .restaurant {
-  max-width: 460px;
   width: 100%;
   min-width: 300px;
   height: 275px;
@@ -400,7 +393,7 @@ header > span:first-child {
   box-shadow: 0.5px 5px 9px rgba(154, 154, 154, 0.25);
   z-index: 50;
 }
-header img {
+header .logo {
   width: 45%;
   max-width: 330px;
 }
@@ -429,6 +422,7 @@ header p {
   margin: 0px;
   width: 100%;
   position: relative;
+  z-index: 1;
 }
 .nav a {
   position: absolute;
@@ -441,8 +435,42 @@ header p {
 .header--menu {
   width: 100%;
   margin-bottom: 0px;
-  max-height: 350px;
+}
+.header--menu .img--menu {
+  width: 100%;
+  max-height: 300px;
   object-fit: cover;
+  position: relative;
+  top: -12px;
+}
+@media screen and (min-width: 680px) {
+  .header--menu .img--menu {
+    max-height: 380px;
+  }
+}
+
+.grid {
+  display: grid;
+  width: 100%;
+  justify-items: stretch;
+  grid-gap: 2rem;
+}
+@media screen and (min-width: 680px) {
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    grid-gap: 2rem;
+  }
+}
+.grid--menu {
+  justify-items: stretch;
+}
+@media screen and (min-width: 680px) {
+  .grid--menu {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    grid-gap: 2rem;
+  }
 }
 
 footer {
@@ -472,6 +500,30 @@ footer ul li i {
   padding-right: 10px;
 }
 
+.grid {
+  display: grid;
+  width: 100%;
+  justify-items: stretch;
+  grid-gap: 2rem;
+}
+@media screen and (min-width: 680px) {
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    grid-gap: 2rem;
+  }
+}
+.grid--menu {
+  justify-items: stretch;
+}
+@media screen and (min-width: 680px) {
+  .grid--menu {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    grid-gap: 2rem;
+  }
+}
+
 /*Section fonctionnement*/
 .fonctionnement {
   background: white;
@@ -481,7 +533,6 @@ footer ul li i {
   align-items: center;
 }
 .fonctionnement__step {
-  max-width: 460px;
   width: 100%;
   min-width: 300px;
   text-decoration: none;
@@ -514,20 +565,18 @@ footer ul li i {
   font-weight: 600;
   font-size: 0.9rem;
 }
-.fonctionnement__step > span:nth-child(2):hover {
-  box-shadow: 0.5px 5px 9px rgba(154, 154, 154, 0.8);
-  border-radius: 20px;
-}
-.fonctionnement__step:hover > span:nth-child(2) {
-  background: #e4d5f6;
-}
-.fonctionnement__step:hover i {
-  color: rgb(147, 86, 220);
-}
-.fonctionnement__step i {
+.fonctionnement__step > span:nth-child(2) i {
   padding: 5px 15px 5px 10px;
   color: grey;
   justify-content: center;
+}
+.fonctionnement__step > span:nth-child(2):hover {
+  box-shadow: 0.5px 5px 9px rgba(154, 154, 154, 0.8);
+  border-radius: 20px;
+  background: #e4d5f6;
+}
+.fonctionnement__step > span:nth-child(2):hover i {
+  color: rgb(147, 86, 220);
 }
 
 /*Section Restaurants*/
@@ -550,8 +599,18 @@ footer ul li i {
   align-items: center;
   margin-bottom: 15px;
 }
+@media screen and (min-width: 680px) {
+  .menu__name {
+    justify-content: center;
+  }
+}
+@media screen and (min-width: 680px) {
+  .menu__name button {
+    margin-left: 30px;
+  }
+}
 .menu__plates {
-  margin-bottom: 15px;
+  margin-bottom: 30px;
 }
 .menu__plates .choice {
   animation: plates__choice 1100ms ease-in backwards;
