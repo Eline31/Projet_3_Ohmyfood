@@ -63,15 +63,14 @@
 .like {
     position: relative;
     overflow:hidden;
-    > button:first-child {
+    width: 26px;
+    font-size: 1.4rem;
+    > a:first-child {
         border: none;
         background: none;
         cursor: pointer;
-        i {
-            font-size: 1.4rem;
-        }
     }
-    > button:last-child {
+    > a:last-child {
         border: none;
         background: none;
         cursor: pointer;
@@ -80,15 +79,15 @@
         opacity: 0;
         transition: opacity 300ms ease-in-out;
         i {
-            font-size: 1.4rem;
             background-image: linear-gradient($colour-primary, $colour-secondary);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-position: absolute;
+            width:25px;
         }
     }
     &:hover {
-        > button:last-child {
+        > a:last-child {
             opacity: 1;
         }   
     }

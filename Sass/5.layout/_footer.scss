@@ -1,9 +1,16 @@
 footer {
     background: $colour-footer;
     color: white;
-    padding: 30px 20px;
+    padding: 20px 20px 30px 20px;
     ul {
-        @media (min-width: 992px) {
+        > span {
+            font-size: 1.3rem;
+            line-height: 3rem;
+            font-family: shrikhand;
+            font-weight: 400;
+            width: 100%;
+        }
+        @media screen and (min-width: 680px) {
             display: flex;
             flex-direction: row;
             flex-wrap: wrap;

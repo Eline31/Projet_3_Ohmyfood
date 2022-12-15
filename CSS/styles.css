@@ -59,23 +59,22 @@ h3 {
   margin: 0px 0px 5px 0px;
 }
 
+/*h4 {
+    font-size: 1.3rem;
+    padding-bottom:15px;
+    margin: 0px;
+    font-family: shrikhand;
+    font-weight: 400;
+    width: 100%;
+}*/
 h4 {
-  font-size: 1.3rem;
-  padding-bottom: 15px;
-  margin: 0px;
-  font-family: shrikhand;
-  font-weight: 400;
-  width: 100%;
-}
-
-h5 {
   font-size: 1.8rem;
   font-family: shrikhand;
   font-weight: 400;
   margin: 0px;
 }
 
-h6 {
+h5 {
   font-family: roboto;
   font-size: 1.2rem;
   font-weight: 400;
@@ -189,16 +188,15 @@ ul {
 .like {
   position: relative;
   overflow: hidden;
+  width: 26px;
+  font-size: 1.4rem;
 }
-.like > button:first-child {
+.like > a:first-child {
   border: none;
   background: none;
   cursor: pointer;
 }
-.like > button:first-child i {
-  font-size: 1.4rem;
-}
-.like > button:last-child {
+.like > a:last-child {
   border: none;
   background: none;
   cursor: pointer;
@@ -207,14 +205,14 @@ ul {
   opacity: 0;
   transition: opacity 300ms ease-in-out;
 }
-.like > button:last-child i {
-  font-size: 1.4rem;
+.like > a:last-child i {
   background-image: linear-gradient(rgb(147, 86, 220), rgb(255, 121, 218));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-position: absolute;
+  width: 25px;
 }
-.like:hover > button:last-child {
+.like:hover > a:last-child {
   opacity: 1;
 }
 
@@ -476,9 +474,16 @@ header p {
 footer {
   background: #353535;
   color: white;
-  padding: 30px 20px;
+  padding: 20px 20px 30px 20px;
 }
-@media (min-width: 992px) {
+footer ul > span {
+  font-size: 1.3rem;
+  line-height: 3rem;
+  font-family: shrikhand;
+  font-weight: 400;
+  width: 100%;
+}
+@media screen and (min-width: 680px) {
   footer ul {
     display: flex;
     flex-direction: row;
@@ -605,7 +610,7 @@ footer ul li i {
   }
 }
 @media screen and (min-width: 680px) {
-  .menu__name button {
+  .menu__name .like {
     margin-left: 30px;
   }
 }
