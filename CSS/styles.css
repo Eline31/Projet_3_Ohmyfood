@@ -358,20 +358,6 @@ ul {
   position: absolute;
 }
 
-.grid {
-  display: grid;
-  width: 100%;
-  justify-items: center;
-  grid-gap: 2rem;
-}
-@media screen and (min-width: 680px) {
-  .grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
-    grid-gap: 2rem;
-  }
-}
-
 header {
   display: flex;
   flex-direction: column;
