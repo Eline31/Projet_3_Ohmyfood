@@ -186,33 +186,28 @@ ul {
 }
 
 .like {
-  position: relative;
-  overflow: hidden;
-  width: 26px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-size: 1.4rem;
+  width: 26px;
 }
-.like > a:first-child {
+.like__btn {
   border: none;
   background: none;
   cursor: pointer;
 }
-.like > a:last-child {
-  border: none;
-  background: none;
-  cursor: pointer;
+.like__btn--full {
   position: absolute;
-  left: 0px;
   opacity: 0;
   transition: opacity 300ms ease-in-out;
 }
-.like > a:last-child i {
-  background-image: linear-gradient(rgb(147, 86, 220), rgb(255, 121, 218));
+.like__btn--full i {
+  background-image: linear-gradient(rgb(255, 121, 218), rgb(147, 86, 220));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  background-position: absolute;
-  width: 25px;
 }
-.like:hover > a:last-child {
+.like:hover .like__btn--full {
   opacity: 1;
 }
 
@@ -476,7 +471,7 @@ footer {
   color: white;
   padding: 20px 20px 30px 20px;
 }
-footer ul > span {
+footer > span {
   font-size: 1.3rem;
   line-height: 3rem;
   font-family: shrikhand;

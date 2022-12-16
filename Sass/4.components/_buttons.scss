@@ -61,36 +61,31 @@
 }
 
 .like {
-    position: relative;
-    overflow:hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size:1.4rem;
     width: 26px;
-    font-size: 1.4rem;
-    > a:first-child {
+    &__btn {
         border: none;
         background: none;
         cursor: pointer;
-    }
-    > a:last-child {
-        border: none;
-        background: none;
-        cursor: pointer;
-        position: absolute;
-        left:0px;
-        opacity: 0;
-        transition: opacity 300ms ease-in-out;
-        i {
-            background-image: linear-gradient($colour-primary, $colour-secondary);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-position: absolute;
-            width:25px;
+        &--full {
+            position: absolute;
+            opacity: 0;
+            transition: opacity 300ms ease-in-out;
+            i {
+                background-image: linear-gradient($colour-secondary, $colour-primary);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }  
         }
     }
     &:hover {
-        > a:last-child {
+        .like__btn--full {
             opacity: 1;
-        }   
-    }
+        } 
+    } 
 }
 
 .choice {
