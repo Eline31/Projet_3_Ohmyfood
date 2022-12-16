@@ -8,12 +8,12 @@
         grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
         grid-gap: 2rem;
     } 
-    &--menu {
+    /*&--menu {
         justify-items:stretch;
         @media screen and (min-width: 680px) {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
             grid-gap: 2rem;
         } 
-    }
+    }*/
 }

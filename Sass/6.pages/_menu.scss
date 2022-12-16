@@ -21,7 +21,6 @@
         } 
     }
     &__plates {
-        margin-bottom: 30px;
         .choice {
             animation: plates__choice 1100ms ease-in backwards;
                 @for $i from 1 through 4 {
@@ -29,6 +28,6 @@
                        animation-delay: 300ms * $i; 
                     }
                 }
-        }            
+        }           
     }
 }

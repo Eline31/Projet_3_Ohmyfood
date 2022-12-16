@@ -59,6 +59,14 @@ h3 {
   margin: 0px 0px 5px 0px;
 }
 
+/*h4 {
+    font-size: 1.3rem;
+    padding-bottom:15px;
+    margin: 0px;
+    font-family: shrikhand;
+    font-weight: 400;
+    width: 100%;
+}*/
 h4 {
   font-size: 1.8rem;
   font-family: shrikhand;
@@ -129,6 +137,9 @@ ul {
   width: 200px;
   font-size: 0.9rem;
   transition: filter 0.5s;
+}
+.btn--menu {
+  margin-top: 30px;
 }
 .btn:hover {
   box-shadow: 0.5px 5px 9px rgba(154, 154, 154, 0.8);
@@ -204,7 +215,6 @@ ul {
 }
 
 .choice {
-  width: 100%;
   font-family: roboto;
   font-size: 1.1rem;
   font-weight: 700;
@@ -439,19 +449,17 @@ header p {
   width: 100%;
   justify-items: stretch;
   grid-gap: 2rem;
+  /*&--menu {
+      justify-items:stretch;
+      @media screen and (min-width: 680px) {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+          grid-gap: 2rem;
+      } 
+  }*/
 }
 @media screen and (min-width: 680px) {
   .grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
-    grid-gap: 2rem;
-  }
-}
-.grid--menu {
-  justify-items: stretch;
-}
-@media screen and (min-width: 680px) {
-  .grid--menu {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
     grid-gap: 2rem;
@@ -497,19 +505,17 @@ footer ul li i {
   width: 100%;
   justify-items: stretch;
   grid-gap: 2rem;
+  /*&--menu {
+      justify-items:stretch;
+      @media screen and (min-width: 680px) {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+          grid-gap: 2rem;
+      } 
+  }*/
 }
 @media screen and (min-width: 680px) {
   .grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
-    grid-gap: 2rem;
-  }
-}
-.grid--menu {
-  justify-items: stretch;
-}
-@media screen and (min-width: 680px) {
-  .grid--menu {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
     grid-gap: 2rem;
@@ -600,9 +606,6 @@ footer ul li i {
   .menu__name .like {
     margin-left: 30px;
   }
-}
-.menu__plates {
-  margin-bottom: 30px;
 }
 .menu__plates .choice {
   animation: plates__choice 1100ms ease-in backwards;
