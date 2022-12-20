@@ -58,12 +58,16 @@
     &__description {
         padding: 15px 20px 15px 15px;
         display: flex;
-        justify-content: space-between;
-        align-items: center; 
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start; 
     }
 }
 
 .like {
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -85,6 +89,9 @@
         .like__btn--full {
             opacity: 1;
         } 
+    }
+    &--menu {
+        position:inherit;
     } 
 }
 
