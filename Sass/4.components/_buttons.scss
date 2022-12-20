@@ -68,12 +68,10 @@
     justify-content: center;
     align-items: center;
     font-size:1.4rem;
-    width: 26px;
-    &__btn {
-        border: none;
-        background: none;
-        cursor: pointer;
-        &--full {
+    border: none;
+    background: none;
+    cursor: pointer;
+    &__btn--full {
             position: absolute;
             opacity: 0;
             transition: opacity 300ms ease-in-out;
@@ -83,7 +81,6 @@
                 -webkit-text-fill-color: transparent;
             }  
         }
-    }
     &:hover {
         .like__btn--full {
             opacity: 1;
