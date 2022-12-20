@@ -185,9 +185,6 @@ ul {
   justify-content: center;
   align-items: center;
   font-size: 1.4rem;
-  width: 26px;
-}
-.like__btn {
   border: none;
   background: none;
   cursor: pointer;
