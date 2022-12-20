@@ -42,7 +42,7 @@
     &:hover {
         @include btn-hover;
     }
-    &--nouveau {
+    &__nouveau {
         color: darken($colour-tertiary, 80%);
         background-color: $colour-tertiary;
         width: 90px;

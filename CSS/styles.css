@@ -160,7 +160,7 @@ ul {
   box-shadow: 0.5px 5px 9px rgba(154, 154, 154, 0.8);
   opacity: 75%;
 }
-.restaurant--nouveau {
+.restaurant__nouveau {
   color: black;
   background-color: #99E2D0;
   width: 90px;
