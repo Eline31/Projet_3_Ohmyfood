@@ -229,7 +229,7 @@ ul {
   margin-bottom: 15px;
   transition: all 400ms ease-in-out;
 }
-.choice .title {
+.choice__title {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -239,12 +239,12 @@ ul {
   overflow: hidden;
   white-space: nowrap;
 }
-.choice .title > span {
+.choice__title > span {
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
 }
-.choice .title > p {
+.choice__title > p {
   font-weight: 400;
   font-size: 1rem;
   padding-top: 5px;
@@ -252,7 +252,7 @@ ul {
   overflow: hidden;
   white-space: nowrap;
 }
-.choice .price {
+.choice__price {
   padding-left: 10px;
   background: white;
   height: 21px;
@@ -287,7 +287,7 @@ ul {
 .choice:hover span i {
   transform: rotate(360deg);
 }
-.choice:hover .price {
+.choice:hover__price {
   transform: translateX(-70px);
 }
 

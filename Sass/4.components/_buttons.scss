@@ -113,7 +113,7 @@
     overflow: hidden;
     margin-bottom: 15px;
     transition: all 400ms ease-in-out;
-    .title {
+    &__title {
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
@@ -136,7 +136,7 @@
             white-space: nowrap;
         }
     }
-    .price {
+    &__price {
         padding-left: 10px;
         background: white;
         height: 21px;
@@ -170,7 +170,7 @@
                 transform: rotate(360deg);
             }
         }
-        .price {
+        &__price {
             transform: translateX(-70px);
         }
         }
